@@ -1,7 +1,6 @@
 import "./App.css";
 import { Header } from "./Header";
 import { MyButton } from "./MyButton";
-import { Profile } from "./Profile";
 
 export const user = {
   name: "Hedy Lamarr",
