@@ -5,10 +5,13 @@
 .header{
     background-color: #213547;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
     z-index: 1;
+    position: sticky;
+    top: 0;
+    align-items: center;
 }
 
 h3{
@@ -20,10 +23,106 @@ h3{
     list-style: none;
     padding: 0;
     display: flex;
-    min-width: 500px;
     justify-content: space-around;
 }
 
 .nav_bar li{
     color: #646cff;
+}
+
+.social_links{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    place-items: center;
+}
+
+.social_link{
+    font-size: 25px;
+    color: #213547;
+}
+
+.welcome{
+    max-width: 700px;
+    padding: 10px;
+}
+
+.main_container{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.main_avatar{
+    border-radius: 50%;
+}
+
+.techStack{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projects_container>h1{
+    text-align: center;
+}
+
+.project_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    background-color: lightgray;
+    border-radius: 25px;
+}
+
+.projects>.project_container:hover{
+    background-color: #213547;
+    cursor: pointer;
+    color: white;
+}
+
+.project_avatar{
+    border-radius: 15%;
+}
+
+.contact{
+    background: linear-gradient(150deg, #213547, #213547, #fff);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact_form{
+    right: 0;
+}
+
+.contact_form>table>tr{
+    display: flex;
+    flex-direction: column;
+}
+.contact_form>table>tr>label{
+    color: white;
+    font-size: 14px;
+}
+
+.contact_form>table>tr>input[type="text"], input[type="tel"], input[type="email"], textarea{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 5px;
+    font-size: 12px;
 }

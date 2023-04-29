@@ -1,13 +1,17 @@
-function handleClick() {
-  alert(
-    "Message sent successfully.\nWe will get back to you as soon as possible."
-  );
-}
+import {
+  JSXElementConstructor,
+  MouseEventHandler,
+  ReactElement,
+  ReactFragment,
+  ReactPortal,
+  useState,
+} from "react";
 
-export function MyButton() {
-  return (
-    <button className="btn" onClick={handleClick}>
-      Send Message
-    </button>
-  );
+type Props = {
+  type: string;
+  onclick: MouseEventHandler;
+  value: string;
+};
+export function Button(props: Props) {
+  return <button onClick={props.onclick}>{props.value}</button>;
 }

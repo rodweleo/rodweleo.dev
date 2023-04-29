@@ -1,6 +1,17 @@
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "../node_modules/react-router-dom/dist/index";
+import { About } from "./pages/About";
 import "./App.css";
+import { Contact } from "./pages/Contact";
 import { Header } from "./Header";
+import { Homepage } from "./pages/Homepage";
 import { MyButton } from "./MyButton";
+import { Projects } from "./pages/Projects";
+import { Footer } from "./Footer";
+import { SocialLinks } from "./SocialLinks";
 
 export const user = {
   name: "Hedy Lamarr",
@@ -10,10 +21,15 @@ export const user = {
 
 function App() {
   return (
-    <main>
+    <Router>
       <Header />
-      <MyButton />
-    </main>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 
