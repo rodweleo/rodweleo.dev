@@ -12,7 +12,7 @@ export function SocialLinks() {
       <Link to="https://www.linkedin.com/rodweleo" className="social_link">
         <BsLinkedin />
       </Link>
-      <Link to="https://www.github.com/github" className="social_link">
+      <Link to="mailto:leorodwel86@gmail.com" className="social_link">
         <HiMail />
       </Link>
     </div>

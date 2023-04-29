@@ -6,7 +6,7 @@
     background-color: #213547;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
     z-index: 1;
     position: sticky;
@@ -24,12 +24,16 @@ h3{
     padding: 0;
     display: flex;
     justify-content: space-around;
+    min-width: 600px;
 }
 
 .nav_bar li{
     color: #646cff;
 }
 
+.bars{
+    display: none;
+}
 .social_links{
     display: flex;
     justify-content: space-around;
@@ -39,7 +43,7 @@ h3{
 
 .social_link{
     font-size: 25px;
-    color: #213547;
+    color: ;
 }
 
 .welcome{
@@ -126,4 +130,22 @@ h3{
     border-radius: 5px;
     padding: 10px 5px;
     font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    .bars{
+        display: block;
+        cursor: pointer;
+    }
+    .nav_bar{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: #213547;
+        right: 0;
+        line-height: 15vh;
+        width: 50%;
+        top: 100%;
+        display: none;
+    }
 }

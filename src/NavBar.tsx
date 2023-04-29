@@ -3,6 +3,7 @@ import { Link } from "../node_modules/react-router-dom/dist/index";
 export function NavBar() {
   return (
     <div className="nav_bar">
+      
       <li>
         <Link to="/">Home</Link>
       </li>
