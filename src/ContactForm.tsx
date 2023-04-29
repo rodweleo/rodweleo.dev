@@ -2,8 +2,7 @@ import { Button } from "./MyButton";
 
 export function ContactForm() {
   function handleClick() {
-    const form = document.getElementById("contactForm");
-
+    alert("Thank you for your message.");
   }
 
   return (
@@ -11,7 +10,7 @@ export function ContactForm() {
       <h3>Leave me a message</h3>
       <table>
         <tr>
-          <label for="name">Name</label>
+          <label htmlFor="name">Name</label>
           <input
             type="text"
             id="name"
@@ -21,7 +20,7 @@ export function ContactForm() {
           />
         </tr>
         <tr>
-          <label for="email">Email Address </label>
+          <label htmlFor="email">Email Address </label>
           <input
             type="email"
             id="email"
@@ -30,7 +29,7 @@ export function ContactForm() {
           />
         </tr>
         <tr>
-          <label for="number">Phone Number </label>
+          <label htmlFor="number">Phone Number </label>
           <input
             type="tel"
             id="number"
@@ -39,7 +38,7 @@ export function ContactForm() {
           />
         </tr>
         <tr>
-          <label for="message">Message</label>
+          <label htmlFor="message">Message</label>
           <textarea id="message" placeholder="Message"></textarea>
         </tr>
       </table>

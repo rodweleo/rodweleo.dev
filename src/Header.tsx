@@ -1,5 +1,4 @@
 import { NavBar } from "./NavBar";
-import { SocialLinks } from "./SocialLinks";
 import { FaBars } from "react-icons/fa";
 
 export function Header() {

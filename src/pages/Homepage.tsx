@@ -1,10 +1,7 @@
 import { Link } from "../../node_modules/react-router-dom/dist/index";
 import admin from "../assets/images/Profile Picture.jpg";
 import project_avatar from "../assets/images/smart-muscle.jpeg";
-import { Footer } from "../Footer";
 import { SocialLinks } from "../SocialLinks";
-import { FaGithub } from "react-icons/fa";
-import { MyButton } from "../MyButton";
 import { ContactForm } from "../ContactForm";
 
 export function Homepage() {
@@ -89,7 +86,6 @@ export function Homepage() {
     </div>
   ));
 
-  const link = project.map((link) => <span>{link}</span>);
 
   return (
     <>

@@ -8,10 +8,7 @@ import "./App.css";
 import { Contact } from "./pages/Contact";
 import { Header } from "./Header";
 import { Homepage } from "./pages/Homepage";
-import { Button } from "./MyButton";
 import { Projects } from "./pages/Projects";
-import { Footer } from "./Footer";
-import { SocialLinks } from "./SocialLinks";
 
 export const user = {
   name: "Hedy Lamarr",

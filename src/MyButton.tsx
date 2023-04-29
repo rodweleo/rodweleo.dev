@@ -1,10 +1,5 @@
 import {
-  JSXElementConstructor,
   MouseEventHandler,
-  ReactElement,
-  ReactFragment,
-  ReactPortal,
-  useState,
 } from "react";
 
 type Props = {
