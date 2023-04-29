@@ -6,11 +6,11 @@ import { ContactForm } from "../ContactForm";
 
 export function Homepage() {
   const tech_stack = [
-    { name: "Java", url: "https://www.oracle.com/java", id: 1 },
-    { name: "SQL", url: "https://www.mysql.com", id: 2 },
+    { name: "Java", url: "https://www.oracle.com/ke/java/", id: 1 },
+    { name: "SQL", url: "https://www.mysql.com/", id: 2 },
     { name: "ReactJS", url: "https://www.react/dev", id: 3 },
-    { name: "Android", url: "https://developersandroid.com", id: 4 },
-    { name: "Tomcat", url: "https://www.tomcat.com", id: 5 },
+    { name: "Android", url: "https://developer.android.com/", id: 4 },
+    { name: "Tomcat", url: "https://tomcat.apache.org/", id: 5 },
   ];
 
   const stack = tech_stack.map((tech_stack_item) => (
@@ -85,7 +85,6 @@ export function Homepage() {
       </div>
     </div>
   ));
-
 
   return (
     <>
