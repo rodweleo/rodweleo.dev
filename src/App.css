@@ -144,7 +144,7 @@ h3{
 
     .nav_bar.active{
         position: absolute;
-        background-color: red;
+        background-color: #213547;
         line-height: 15vh;
         top: 100%;
         display: flex;
