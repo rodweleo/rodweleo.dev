@@ -1,9 +1,27 @@
-import { Button } from "./MyButton";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import emailAPI from "./utils/emailAPI";
 
 export function ContactForm() {
-  function handleClick() {
-    alert("Thank you for your message.");
-  }
+  const contact_form = useRef();
+
+  const sendMessage = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        emailAPI.USER_ID,
+        emailAPI.TEMPLATE_ID,
+        contact_form.current,
+        "3wYIW4FWRr2CqzIyD"
+      )
+      .then((response) => {
+        console.log("SUCCESS", response.status, response.text);
+      })
+      .catch((err) => {
+        console.log("FAILURE", err);
+      });
+  };
 
   return (
     <>
@@ -12,7 +30,12 @@ export function ContactForm() {
         <h2>Let's talk</h2>
       </div>
 
-      <form className="contact_form" id="contactForm">
+      <form
+        ref={contact_form}
+        className="contact_form"
+        id="contactForm"
+        onSubmit={sendMessage}
+      >
         <h3>Get in Touch</h3>
         <table>
           <tr>
@@ -42,11 +65,7 @@ export function ContactForm() {
             <textarea id="message" placeholder="Message"></textarea>
           </tr>
         </table>
-        <Button
-          type="Submit"
-          onclick={handleClick}
-          value="Send Message"
-        ></Button>
+        <button type="submit">Send Message</button>
       </form>
     </>
   );
