@@ -8,7 +8,7 @@ function SubscribeForm() {
   const subscribe = (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
-    const formData = refSubscriber.current?.value;
+    const formData = refSubscriber.current;
 
     emailjs.sendForm(
       emailAPI.USER_ID,

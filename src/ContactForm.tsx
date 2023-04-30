@@ -9,7 +9,7 @@ export function ContactForm() {
     e.preventDefault();
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const formData = refForm.current?.value;
+    const formData = refForm.current;
 
     emailjs
       .sendForm(
