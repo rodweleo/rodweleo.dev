@@ -74,6 +74,11 @@ h3{
     justify-content: space-evenly;
 }
 
+.tech_stack_item{
+    font-size: 50px;
+    color: blue;
+}
+
 .projects{
     display: flex;
     flex-wrap: wrap;
@@ -91,10 +96,14 @@ h3{
     margin: 10px;
     padding: 10px;
     width: auto;
-    background-color: lightgray;
+    background-color: rgb(243, 240, 240);
     border-radius: 25px;
 }
 
+.project_details{
+ max-width: 500px;   
+ padding: 10px;
+}
 .projects>.project_container:hover{
     background-color: #213547;
     cursor: pointer;
@@ -106,7 +115,7 @@ h3{
 }
 
 .contact{
-    background: linear-gradient(150deg, #213547, #213547, #fff);
+    background: linear-gradient(180deg, #213547, #213547,#213547, #29567e, #fff);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -132,6 +141,14 @@ h3{
     border-radius: 5px;
     padding: 10px 5px;
     font-size: 12px;
+}
+
+.links{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 600px) {

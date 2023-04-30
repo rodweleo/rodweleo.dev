@@ -9,12 +9,7 @@ import { Contact } from "./pages/Contact";
 import { Header } from "./Header";
 import { Homepage } from "./pages/Homepage";
 import { Projects } from "./pages/Projects";
-
-export const user = {
-  name: "Hedy Lamarr",
-  imageUrl: "https://i.imgur.com/yXOvdOSs.jpg",
-  imageSize: 90,
-};
+import { Footer } from "./Footer";
 
 function App() {
   return (
@@ -26,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

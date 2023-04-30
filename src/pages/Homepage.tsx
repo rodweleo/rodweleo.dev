@@ -3,20 +3,51 @@ import admin from "../assets/images/Profile Picture.jpg";
 import project_avatar from "../assets/images/smart-muscle.jpeg";
 import { SocialLinks } from "../SocialLinks";
 import { ContactForm } from "../ContactForm";
-
+import { FaGithub } from "react-icons/fa";
+import react from "../assets/react.svg";
+import { FaJava } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
+import { SiMysql } from "react-icons/si";
+import { FaAndroid } from "react-icons/fa";
+import { SiApachetomcat } from "react-icons/si";
 export function Homepage() {
   const tech_stack = [
-    { name: "Java", url: "https://www.oracle.com/ke/java/", id: 1 },
-    { name: "SQL", url: "https://www.mysql.com/", id: 2 },
-    { name: "ReactJS", url: "https://www.react/dev", id: 3 },
-    { name: "Android", url: "https://developer.android.com/", id: 4 },
-    { name: "Tomcat", url: "https://tomcat.apache.org/", id: 5 },
+    {
+      name: "Java",
+      image: <FaJava />,
+      url: "https://www.java.com",
+      id: 1,
+    },
+    {
+      name: "SQL",
+      image: <SiMysql />,
+      url: "https://www.mysql.com/",
+      id: 2,
+    },
+    {
+      name: "ReactJS",
+      image: <FaReact />,
+      url: "https://www.react/dev",
+      id: 3,
+    },
+    {
+      name: "Android",
+      image: <FaAndroid />,
+      url: "https://developer.android.com/",
+      id: 4,
+    },
+    {
+      name: "Tomcat",
+      image: <SiApachetomcat />,
+      url: "https://tomcat.apache.org/",
+      id: 5,
+    },
   ];
 
   const stack = tech_stack.map((tech_stack_item) => (
     <li key={tech_stack_item.id}>
-      <Link to={tech_stack_item.url} style={{ color: "blue" }}>
-        {tech_stack_item.name}
+      <Link to={tech_stack_item.url} className="tech_stack_item">
+        {tech_stack_item.image}
       </Link>
     </li>
   ));
@@ -29,7 +60,7 @@ export function Homepage() {
       avatar_size: 200,
       name: "Smart Muscle Fitness Center",
       description:
-        "This is a web based application that allows the customers to enroll into a gym",
+        "This is a web based application that allows the customers to enroll into a gym. This will be a great marketing strategy that makes the business shine online.",
       languages: [
         {
           language: "Java",
@@ -46,27 +77,6 @@ export function Homepage() {
         },
       ],
     },
-    {
-      id: 2,
-      avatar: project_avatar,
-      avatar_size: 200,
-      name: "Smart Muscle Fitness Center",
-      description:
-        "This is a web based application that allows the customers to enroll into a gym",
-      languages: [
-        {
-          language: "Java",
-        },
-        {
-          language: "JavaScript",
-        },
-        { language: "SQL" },
-      ],
-      links: {
-        live_demo: "h ttp://www.smartmuscle.com",
-        github: "smartmuscle",
-      },
-    },
   ];
 
   //get links for different projects
@@ -82,6 +92,14 @@ export function Homepage() {
       <div className="project_details">
         <h4>{project.name}</h4>
         <p>{project.description}</p>
+        <div className="links">
+          <Link to="https://www.smartmuscle.com" className="link_btn">
+            <FaGithub />
+          </Link>
+          <Link to="https://www.smartmuscle.com" className="link_btn">
+            Live Demo
+          </Link>
+        </div>
       </div>
     </div>
   ));

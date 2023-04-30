@@ -7,17 +7,11 @@ export function ContactForm() {
 
   return (
     <form className="contact_form" id="contactForm">
-      <h3>Leave me a message</h3>
+      <h3>Get in Touch</h3>
       <table>
         <tr>
           <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            value="Rodwell"
-          />
+          <input type="text" id="name" name="name" placeholder="Name" />
         </tr>
         <tr>
           <label htmlFor="email">Email Address </label>
