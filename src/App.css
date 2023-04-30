@@ -24,11 +24,13 @@ h3{
     padding: 0;
     display: flex;
     justify-content: space-around;
-    min-width: 600px;
+    width: 50%;
+    right: 0;
 }
 
 .nav_bar li{
     color: #646cff;
+   
 }
 
 .bars{
@@ -149,6 +151,5 @@ h3{
         top: 100%;
         display: flex;
         flex-direction: column;
-        text-align: right;
     }
 }
