@@ -4,7 +4,6 @@ import project_avatar from "../assets/images/smart-muscle.jpeg";
 import { SocialLinks } from "../SocialLinks";
 import { ContactForm } from "../ContactForm";
 import { FaGithub } from "react-icons/fa";
-import react from "../assets/react.svg";
 import { FaJava } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
