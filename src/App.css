@@ -139,13 +139,16 @@ h3{
     }
     .nav_bar{
         position: absolute;
-        display: flex;
-        flex-direction: column;
         background-color: #213547;
         right: 0;
         line-height: 15vh;
-        width: 50%;
         top: 100%;
         display: none;
+    }
+
+    .nav_bar.active{
+        display: flex;
+        flex-direction: column;
+        
     }
 }
