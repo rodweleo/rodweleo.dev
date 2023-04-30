@@ -3,22 +3,27 @@ import emailjs from "@emailjs/browser";
 import emailAPI from "./utils/emailAPI";
 
 export function ContactForm() {
-  const contact_form = useRef();
+  const refForm = useRef<HTMLFormElement>(null);
 
-  const sendMessage = (e) => {
+  const sendMessage = (e: { preventDefault: () => void }) => {
     e.preventDefault();
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const formData = refForm.current?.value;
 
     emailjs
       .sendForm(
         emailAPI.USER_ID,
         emailAPI.TEMPLATE_ID,
-        contact_form.current,
+        formData,
         "3wYIW4FWRr2CqzIyD"
       )
-      .then((response) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .then((response: { status: any; text: any }) => {
         console.log("SUCCESS", response.status, response.text);
       })
-      .catch((err) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .catch((err: any) => {
         console.log("FAILURE", err);
       });
   };
@@ -30,12 +35,7 @@ export function ContactForm() {
         <h2>Let's talk</h2>
       </div>
 
-      <form
-        ref={contact_form}
-        className="contact_form"
-        id="contactForm"
-        onSubmit={sendMessage}
-      >
+      <form ref={refForm} className="contact_form" onSubmit={sendMessage}>
         <h3>Get in Touch</h3>
         <table>
           <tr>
