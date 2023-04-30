@@ -1,5 +1,4 @@
 import { Button } from "./MyButton";
-import { AiOutlineSend } from "react-icons/ai";
 
 export function ContactForm() {
   function handleClick() {
@@ -43,9 +42,11 @@ export function ContactForm() {
             <textarea id="message" placeholder="Message"></textarea>
           </tr>
         </table>
-        <Button type="Submit" onclick={handleClick} value="Send Message">
-          <AiOutlineSend />
-        </Button>
+        <Button
+          type="Submit"
+          onclick={handleClick}
+          value="Send Message"
+        ></Button>
       </form>
     </>
   );
