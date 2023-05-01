@@ -110,6 +110,10 @@ h3{
     color: white;
 }
 
+.projects>.project_container:hover>.project_details>h4{
+    color: white;
+}
+
 .project_avatar{
     border-radius: 15%;
 }

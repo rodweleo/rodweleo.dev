@@ -1,18 +1,21 @@
-import { useRef } from "react";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import emailAPI from "./utils/emailAPI";
 
 export function ContactForm() {
-  const refForm = useRef<HTMLFormElement>(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    message: "",
+  });
 
   const sendMessage = (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const formData = refForm.current;
-
     emailjs
-      .sendForm(
+      .send(
         emailAPI.USER_ID,
         emailAPI.TEMPLATE_ID,
         formData,
@@ -21,6 +24,7 @@ export function ContactForm() {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .then((response: { status: any; text: any }) => {
         console.log("SUCCESS", response.status, response.text);
+        setFormData({ name: "", email: "", number: "", message: "" });
       })
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .catch((err: any) => {
@@ -35,17 +39,30 @@ export function ContactForm() {
         <h2>Let's talk</h2>
       </div>
 
-      <form ref={refForm} className="contact_form" onSubmit={sendMessage}>
+      <form className="contact_form" onSubmit={sendMessage}>
         <h3>Get in Touch</h3>
         <table>
           <tr>
             <label htmlFor="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Name" />
+            <input
+              type="text"
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
+              value={formData.name}
+              id="name"
+              name="name"
+              placeholder="Name"
+            />
           </tr>
           <tr>
             <label htmlFor="email">Email Address </label>
             <input
               type="email"
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
+              value={formData.email}
               id="email"
               name="email"
               placeholder="Email Address"
@@ -55,6 +72,10 @@ export function ContactForm() {
             <label htmlFor="number">Phone Number </label>
             <input
               type="tel"
+              onChange={(e) =>
+                setFormData({ ...formData, number: e.target.value })
+              }
+              value={formData.number}
               id="number"
               name="number"
               placeholder="Phone Number"
@@ -62,7 +83,14 @@ export function ContactForm() {
           </tr>
           <tr>
             <label htmlFor="message">Message</label>
-            <textarea id="message" placeholder="Message"></textarea>
+            <textarea
+              id="message"
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
+              value={formData.message}
+              placeholder="Message"
+            ></textarea>
           </tr>
         </table>
         <button type="submit">Send Message</button>
