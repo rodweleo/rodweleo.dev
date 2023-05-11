@@ -71,7 +71,7 @@ export function Homepage() {
       ],
       links: {
         live_demo: "https://smartmuscle.vercel.app",
-        github: "https://www.github/com/rodweleo/smartmuscle",
+        github: "https://www.github.com/rodweleo/smartmuscle",
       },
     },
   ];
