@@ -1,7 +1,8 @@
 import { FaGithub } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
 import { HiMail } from "react-icons/hi";
-import { Link } from "../node_modules/react-router-dom/dist/index";
+import { Link } from "react-router-dom";
+
 
 export function SocialLinks() {
   return (

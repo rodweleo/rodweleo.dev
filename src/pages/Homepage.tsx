@@ -1,8 +1,8 @@
 import { Link } from "../../node_modules/react-router-dom/dist/index";
 import admin from "../assets/images/Profile Picture.jpg";
 import project_avatar from "../assets/images/smart-muscle.jpeg";
-import { SocialLinks } from "../SocialLinks";
-import { ContactForm } from "../ContactForm";
+import { SocialLinks } from "../components/SocialLinks";
+import { ContactForm } from "../components/ContactForm";
 import { FaGithub } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
@@ -69,12 +69,10 @@ export function Homepage() {
         },
         { language: "SQL" },
       ],
-      links: [
-        {
-          live_demo: "http://www.smartmuscle.com",
-          github: "smartmuscle",
-        },
-      ],
+      links: {
+        live_demo: "https://smartmuscle.vercel.app",
+        github: "https://www.github/com/rodweleo/smartmuscle",
+      },
     },
   ];
 
@@ -92,10 +90,10 @@ export function Homepage() {
         <h4>{project.name}</h4>
         <p>{project.description}</p>
         <div className="links">
-          <Link to="https://www.smartmuscle.com" className="link_btn">
+          <Link to={project.links.github} className="link_btn">
             <FaGithub />
           </Link>
-          <Link to="https://www.smartmuscle.com" className="link_btn">
+          <Link to={project.links.live_demo} className="link_btn">
             Live Demo
           </Link>
         </div>

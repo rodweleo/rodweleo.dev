@@ -6,10 +6,10 @@ import {
 import { About } from "./pages/About";
 import "./App.css";
 import { Contact } from "./pages/Contact";
-import { Header } from "./Header";
+import { Header } from "./components/Header";
 import { Homepage } from "./pages/Homepage";
 import { Projects } from "./pages/Projects";
-import { Footer } from "./Footer";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (

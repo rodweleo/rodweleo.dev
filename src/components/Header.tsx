@@ -1,6 +1,6 @@
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
-import { Link } from "../node_modules/react-router-dom/dist/index";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
