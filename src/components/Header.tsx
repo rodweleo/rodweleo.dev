@@ -16,13 +16,7 @@ export function Header() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/projects">Projects</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/blog">Blog</Link>
         </li>
       </div>
       <button onClick={toggleSidebar} style={{ background: "#213547" }}>
