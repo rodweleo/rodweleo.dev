@@ -1,13 +1,10 @@
-import SubscribeForm from "../components/SubscribeForm";
-
-export function Footer() {
+export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer>
       <hr />
-      <SubscribeForm />
-      <p>{`Rodwell Leo ${year}`}</p>
+      <p>&copy; {`Rodwell Leo ${year}`}. All Rights Reserved | <a href="privacy-policy-link">Privacy Policy</a></p>
     </footer>
   );
 }

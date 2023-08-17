@@ -1,27 +1,31 @@
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
-export function Header() {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleSidebar() {
     isOpen === false ? setIsOpen(true) : setIsOpen(false);
   }
   return (
-    <header className="header">
-      <h3>rodweleo.dev</h3>
-      <div className={`nav_bar ${isOpen == true ? "active" : ""}`}>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/blog">Blog</Link>
-        </li>
-      </div>
-      <button onClick={toggleSidebar} style={{ background: "#213547" }}>
-        <FaBars className="bars" />
-      </button>
-    </header>
+      <header>
+        <a href='/' style={{ color: 'white'}}>rodweleo.dev</a>
+        <nav className={`nav_bar ${isOpen == true ? "active" : ""}`}>
+          <ul>
+            <li><a href="#about">About</a></li> 
+            <hr />
+            <li><a href="#skills">Skills</a></li>
+            <hr />
+            <li><a href="#projects">Projects</a></li>
+            <hr />
+            <li><a href="/experience">Experience</a></li>
+            <hr />
+            <li><a href="#blog">Blog</a></li>
+            <hr />
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <FaBars className="bars" onClick={toggleSidebar}/>
+      </header>
   );
 }

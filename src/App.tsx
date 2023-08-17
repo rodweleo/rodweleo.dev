@@ -1,28 +1,21 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "../node_modules/react-router-dom/dist/index";
-import { About } from "./pages/About";
 import "./App.css";
-import { Contact } from "./pages/Contact";
-import { Header } from "./components/Header";
-import { Homepage } from "./pages/Homepage";
-import { Projects } from "./pages/Projects";
-import { Footer } from "./components/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import About  from "./pages/About";
+import Blog from "./pages/Blog";
+import Projects from "./pages/Projects";
+import Skills from "./pages/Skills";
 
 function App() {
   return (
-    <Router>
+    <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <About/>
+      <Skills/>
+      <Projects/>
+      <Blog/>
       <Footer />
-    </Router>
+    </>
   );
 }
 

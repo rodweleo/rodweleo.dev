@@ -2,20 +2,16 @@
     border-radius: 50%;
 }
 
-.header{
+header{
     background-color: #213547;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
     z-index: 1;
     position: sticky;
     top: 0;
     align-items: center;
-}
-
-h3{
-    color: white;
 }
 
 .nav_bar{
@@ -28,13 +24,21 @@ h3{
     right: 0;
 }
 
-.nav_bar li{
-    color: #646cff;
-   
+.nav_bar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav_bar ul li a{
+    color: white;
 }
 
 .bars{
     display: none;
+    color: white;
+    cursor: pointer;
 }
 .social_links{
     display: flex;
@@ -46,24 +50,6 @@ h3{
 .social_link{
     font-size: 25px;
     color: #213547;
-}
-
-.welcome{
-    max-width: 700px;
-    padding: 10px;
-}
-
-.main_container{
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    place-items: center;
-    min-height: 100vh;
-}
-
-.main_avatar{
-    border-radius: 50%;
 }
 
 .techStack{
@@ -79,44 +65,6 @@ h3{
     color: blue;
 }
 
-.projects{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.projects_container>h1{
-    text-align: center;
-}
-
-.project_container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 10px;
-    padding: 10px;
-    width: auto;
-    background-color: rgb(243, 240, 240);
-    border-radius: 25px;
-}
-
-.project_details{
- max-width: 500px;   
- padding: 10px;
-}
-.projects>.project_container:hover{
-    background-color: #213547;
-    cursor: pointer;
-    color: white;
-}
-
-.projects>.project_container:hover>.project_details>h4{
-    color: white;
-}
-
-.project_avatar{
-    border-radius: 15%;
-}
 
 .contact{
     background: linear-gradient(180deg, #213547, #213547,#213547, #29567e, #fff);
@@ -132,18 +80,17 @@ h3{
 
 .contact_form{
     right: 0;
-}
-
-.contact_form>table>tr{
     display: flex;
     flex-direction: column;
-}
-.contact_form>table>tr>label{
+    gap: 10px;
+    background-color: grey;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 20px;
     color: white;
-    font-size: 14px;
 }
 
-.contact_form>table>tr>input[type="text"], input[type="tel"], input[type="email"], textarea{
+.contact_form input, textarea{
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px 5px;
@@ -159,7 +106,104 @@ h3{
     align-items: center;
 }
 
+
+/*Styling the buttons*/
+
+.btn-primary{
+    color: white;
+    background-color: #213547;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.btn-primary:hover{
+    color: silver;
+}
+
+.btn-secondary{
+    color: #213547;
+    border: 1px solid #213547;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.btn-secondary:hover{
+    background-color: #6889a6;
+    color: white;
+}
+
+
+/*Styling the about*/
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about p{
+    width: min(90%, 900px);
+    text-indent: 50px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+
+/* Styling the article*/
+
+#blog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article{
+    background-color: whitesmoke;
+    padding: 20px;
+    margin: auto;
+    width: 60%;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.article:hover{
+    border: 1px solid #213547;
+}
+
+.project{
+    background-color: whitesmoke;
+    padding: 20px;
+    margin: auto;
+    width: 60%;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project .project-details a{
+    margin: auto;
+}
+
+.project:hover{
+    border: 1px solid #213547;
+}
+
 @media screen and (max-width: 600px) {
+    header{
+        height: 7.5vh;
+    }
     .bars{
         display: block;
         cursor: pointer;
@@ -167,21 +211,22 @@ h3{
 
     .nav_bar{
         display: none;
+        width: 100%;
+    }
+
+    .nav_bar ul{
+        border-top: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
     }
 
     .nav_bar.active{
         position: absolute;
         background-color: #213547;
-        line-height: 15vh;
         top: 100%;
         display: flex;
         flex-direction: column;
-    }
-
-    .contact{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
     }
 }
