@@ -176,12 +176,10 @@ header{
     width: 60%;
     border-radius: 10px;
     cursor: pointer;
-    display: inline-block;
     margin-bottom: 5px;
     display: flex;
+    flex-flow: wrap;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .project .project-details a{

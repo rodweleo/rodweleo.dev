@@ -1,6 +1,7 @@
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
 import Contact from "../pages/Contact";
+import { AiOutlineClose } from "react-icons/ai";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,14 +32,14 @@ export default function Header() {
             <hr />
             <li className="nav_link"><a href="#projects">Projects</a></li>
             <hr />
-            <li className="nav_link"><a href="/experience">Experience</a></li>
-            <hr />
             <li className="nav_link"><a href="#blog">Blog</a></li>
             <hr />
             <li className="nav_link"><a onClick={()=> setShowContact(true)}>Contact</a></li>
           </ul>
         </nav>
-        <FaBars className="bars" onClick={toggleSidebar}/>
+        {
+          isOpen ?  <AiOutlineClose onClick={()=> setIsOpen(false)} style={{color: 'white', fontSize: '20px'}}/> : <FaBars className="bars" onClick={toggleSidebar}/>
+        }
       </header>
       { showContact && <Contact onViewChange = {setShowContact}/> }
     </>
