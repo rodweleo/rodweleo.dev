@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
 import emailjs from 'emailjs-com';
 import emailAPI from "../utils/emailAPI";
-export default function Contact() {
+export default function Contact({onViewChange}: any) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,10 +31,17 @@ export default function Contact() {
       });
   };
 
+
+  //closing the form
+  const handleClose = (status : boolean) =>{
+    onViewChange(status)
+  }
+
   return (
 
       
       <form className="contact_form" onSubmit={sendMessage}>
+        <AiOutlineClose className='fa-x' onClick={()=>handleClose(false)}/>
         <h2>Let's talk</h2>
             <label htmlFor="name">
               Name
