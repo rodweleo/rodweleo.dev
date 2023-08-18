@@ -52,18 +52,6 @@ header{
     color: #213547;
 }
 
-.techStack{
-    display: flex;
-    list-style: none;
-    padding: 0;
-    width: 100%;
-    justify-content: space-evenly;
-}
-
-.tech_stack_item{
-    font-size: 50px;
-    color: blue;
-}
 
 
 .contact{
@@ -260,7 +248,7 @@ header{
     padding: 0;
     padding-top: 10px;
     list-style: none;
-    line-height: 5vh;
+    line-height: 7vh;
 }
 
 .skill ul li{
