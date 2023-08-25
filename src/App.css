@@ -2,6 +2,7 @@
     border-radius: 50%;
 }
 
+
 header{
     background-color: #213547;
     display: flex;
@@ -12,9 +13,11 @@ header{
     position: sticky;
     top: 0;
     align-items: center;
+    border-bottom: 1px solid silver;
+    height: 7.5vh;
 }
 
-.nav_bar{
+nav{
     align-items: center;
     list-style: none;
     padding: 0;
@@ -24,14 +27,14 @@ header{
     right: 0;
 }
 
-.nav_bar ul {
+nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 20px;
 }
 
-.nav_bar ul li a{
+nav ul li a{
     color: white;
 }
 
@@ -251,6 +254,10 @@ header{
 
 .skill ul li{
     font-size: 18px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 125px;
 }
 
 .project-links{
@@ -268,12 +275,12 @@ header{
         cursor: pointer;
     }
 
-    .nav_bar{
+    nav{
         display: none;
         width: 100%;
     }
 
-    .nav_bar ul{
+    nav ul{
         border-top: 1px solid white;
         display: flex;
         flex-direction: column;
@@ -281,7 +288,7 @@ header{
         text-align: center;
     }
 
-    .nav_bar.active{
+    nav{
         position: absolute;
         background-color: #213547;
         top: 100%;

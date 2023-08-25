@@ -1,5 +1,4 @@
 import { FaJava, FaReact ,FaNodeJs } from "react-icons/fa";
-import { BsCheckCircleFill } from "react-icons/bs";
 import { SiMysql, SiCss3, SiJavascript, SiMongodb, SiGithub } from "react-icons/si";
 import { AiFillHtml5, AiFillApi } from "react-icons/ai"
 import { GrGraphQl } from "react-icons/gr"
@@ -84,7 +83,7 @@ const Skills = () =>{
               <h3>FRONTEND </h3>
               <ul className="stack">
                 {frontend_stack.map((skill, index)=>(
-                  <li key={index}><BsCheckCircleFill/> {skill.name} {skill.image}</li>
+                  <li key={index}> {skill.image} {skill.name} </li>
                 ))}
               </ul>
             </div>
@@ -92,7 +91,7 @@ const Skills = () =>{
               <h3>BACKEND</h3>
               <ul className="stack">
               {backend_stack.map((skill, index)=>(
-                  <li key={index}><BsCheckCircleFill/> {skill.name} {skill.image} </li>
+                  <li key={index}> {skill.image} {skill.name}  </li>
                 ))}
               </ul>
             </div>
@@ -100,7 +99,7 @@ const Skills = () =>{
               <h3>DATABASE </h3>
               <ul className="stack">
               {database_stack.map((skill, index)=>(
-                  <li key={index}><BsCheckCircleFill /> {skill.name} {skill.image}</li>
+                  <li key={index}> {skill.image} {skill.name} </li>
                 ))}
               </ul>
             </div>
@@ -108,7 +107,7 @@ const Skills = () =>{
               <h3>APIs</h3>
               <ul className="stack">
               {api_stack.map((skill, index)=>(
-                  <li key={index}><BsCheckCircleFill /> {skill.name}  {skill.image}</li>
+                  <li key={index}>{skill.image} {skill.name}  </li>
                 ))}
               </ul>
             </div>
@@ -117,7 +116,7 @@ const Skills = () =>{
               <h3>VERSION CONTROL </h3>
               <ul className="stack">
               {version_stack.map((skill, index)=>(
-                  <li key={index}><BsCheckCircleFill /> {skill.name}  {skill.image}</li>
+                  <li key={index}> {skill.image} {skill.name}  </li>
                 ))}
               </ul>
             </div>

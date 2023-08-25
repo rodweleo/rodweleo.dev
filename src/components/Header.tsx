@@ -1,47 +1,27 @@
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
 import Contact from "../pages/Contact";
-import { AiOutlineClose } from "react-icons/ai";
+import { NavBar } from "./Navigation";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [showNav, setShowNav] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
   function toggleSidebar() {
-    isOpen === false ? setIsOpen(true) : setIsOpen(false);
-  }
-
-
-  const links = document.getElementsByClassName('nav_link')
-  for (let i = 0; i <= links.length; i++) {
-        links[i]?.addEventListener('click', ()=>{
-          //onclicking, close the nav bar
-          setIsOpen(false);
-        })
+    showNav === false ? setShowNav(true) : setShowNav(false);
   }
 
   return(
-    <>
+      <>
       <header>
-        <a href='/' style={{ color: 'white'}}>rodweleo.dev</a>
-        <nav className={`nav_bar ${isOpen == true ? "active" : ""}`}>
-          <ul>
-            <li className="nav_link"><a href="#about">About</a></li> 
-            <hr />
-            <li className="nav_link"><a href="#skills">Skills</a></li>
-            <hr />
-            <li className="nav_link"><a href="#projects">Projects</a></li>
-            <hr />
-            <li className="nav_link"><a href="#blog">Blog</a></li>
-            <hr />
-            <li className="nav_link"><a onClick={()=> setShowContact(true)}>Contact</a></li>
-          </ul>
-        </nav>
-        {
-          isOpen ?  <AiOutlineClose onClick={()=> setIsOpen(false)} style={{color: 'white', fontSize: '20px'}}/> : <FaBars className="bars" onClick={toggleSidebar}/>
-        }
-      </header>
+      <a href='/' style={{ color: 'white' }}>rodweleo.dev</a>
+
+      {<FaBars onClick={toggleSidebar} className='bars' />}
+
+      {showNav ? <NavBar /> : ''}
+    </header><hr />
+    
       { showContact && <Contact onViewChange = {setShowContact}/> }
-    </>
+      </>
   );
 }
