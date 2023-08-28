@@ -1,19 +1,18 @@
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import About  from "./pages/About";
-import Blog from "./pages/Blog";
-import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
+import { Routes, Route } from "react-router-dom";
+import Article from "./components/Article";
+import Homepage from "./pages/Homepage";
 
 function App() {
   return (
     <>
-      <Header />
-      <About/>
-      <Skills/>
-      <Projects/>
-      <Blog/>
+      <Header/>
+        <Routes>
+          <Route path='/' element={<Homepage/>}/>
+          <Route path='articles/:id' element={<Article/>}/>
+        </Routes>
       <Footer />
     </>
   );
