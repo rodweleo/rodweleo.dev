@@ -46,6 +46,7 @@ main article{
   text-align: justify;
   margin: auto;
   width: min(90%, 800px);
+  margin-top: 25px;
 }
 
 footer{

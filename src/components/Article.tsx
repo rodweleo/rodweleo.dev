@@ -1,10 +1,31 @@
+import { useParams } from "react-router-dom"
+import getArticle from "../functions/getArticle";
+
 const Article = () => {
+    const { id } = useParams();
+
+    //getting the article id
+    var articleId = Number(id?.slice(id?.indexOf('_') + 1, id?.length))
+
+    //getting the specific article
+    const article = getArticle(articleId);
     
     return(
         <main>
-            <h1>STARTING A START UP</h1>
+            <h1>{article?.title.toUpperCase()}</h1>
+            <p>Created By: {article?.author}</p>
             <img src="https://foundersguide.com/wp-content/uploads/2020/07/startup2.jpg" alt="Start Up"  />
-            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus iure iste incidunt ipsum, repudiandae, necessitatibus quisquam hic, quia inventore deleniti numquam voluptatem vitae esse error quibusdam exercitationem architecto dolores. Unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. A quaerat incidunt voluptates quibusdam tempora fugiat molestiae quo iusto. Impedit facere voluptates iure autem adipisci nemo ducimus quis nulla eligendi quos.</article>
+            <article>{article?.body}</article>
+            <div className="tags">
+                {article?.tags.map((tag, index)=>(
+                    <a href="" key={index}>#{tag}</a>
+                ))}
+            </div>
+            <div className="comments">
+                <form action="" method="post">
+                    <h3>Leave a Comment</h3>
+                </form>
+            </div>
         </main>
     )
 }

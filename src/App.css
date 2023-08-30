@@ -266,6 +266,11 @@ nav ul li a{
     gap: 10px;
 }
 
+.tags{
+    display: flex;
+    gap: 10px;
+}
+
 @media screen and (max-width: 600px) {
     header{
         height: 7.5vh;
