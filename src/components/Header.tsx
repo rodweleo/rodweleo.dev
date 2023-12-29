@@ -1,27 +1,18 @@
-import { FaBars } from "react-icons/fa";
-import { useState } from "react";
-import Contact from "../pages/Contact";
 import { NavBar } from "./Navigation";
+import { NavLink } from "react-router-dom";
+import { SocialLinks } from "./social_links";
 
 export default function Header() {
-  const [showNav, setShowNav] = useState(false);
-  const [showContact, setShowContact] = useState(false);
+  return (
+    <header className="px-5">
+      <NavLink to="/" style={{ color: "white" }} className="header-logo">
+        <img src="./logo.png" alt="" />
+        rodweleo.dev
+      </NavLink>
 
-  function toggleSidebar() {
-    showNav === false ? setShowNav(true) : setShowNav(false);
-  }
+      <NavBar />
 
-  return(
-      <>
-      <header>
-      <a href='/' style={{ color: 'white' }}>rodweleo.dev</a>
-
-      {<FaBars onClick={toggleSidebar} className='bars' />}
-
-      {showNav ? <NavBar /> : ''}
-    </header><hr />
-    
-      { showContact && <Contact onViewChange = {setShowContact}/> }
-      </>
+      <SocialLinks />
+    </header>
   );
 }

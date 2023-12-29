@@ -1,17 +1,19 @@
-import About from "./About"
-import Blog from "./Blog"
-import Projects from "./Projects"
-import Skills from "./Skills"
+import ContactMe from "../components/Contact Me";
+import MainService from "../components/Services";
+import Testimonials from "../components/Testimonials";
+import About from "./About";
+import Projects from "./Projects";
 
-const Homepage = () =>{
-    return(
-        <>
-            <About/>
-            <Skills/>
-            <Projects/>
-            <Blog/>
-        </>
-    )
-}
+const Homepage = () => {
+  return (
+    <>
+      <About />
+      <MainService />
+      <Projects />
+      <Testimonials />
+      <ContactMe />
+    </>
+  );
+};
 
-export default Homepage
+export default Homepage;

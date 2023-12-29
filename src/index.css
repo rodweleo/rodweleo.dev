@@ -1,3 +1,7 @@
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
+
 :root {
   font-family: sans-serif;
   font-synthesis: none;
@@ -7,8 +11,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
-html{
+html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: #493827;
 }
 
 a {
@@ -19,29 +27,29 @@ a:hover {
   color: #535bf2;
 }
 
-label{
+label {
   display: flex;
   flex-direction: column;
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-main img{
+main img {
   height: min(90%, 400px);
   width: min(90%, 800px);
   border-radius: 10px;
 }
 
-main h1{
+main h1 {
   text-align: center;
 }
 
-main article{
+main article {
   text-indent: 50px;
   text-align: justify;
   margin: auto;
@@ -49,7 +57,7 @@ main article{
   margin-top: 25px;
 }
 
-footer{
+footer {
   position: relative;
   text-align: center;
   color: black;
@@ -62,54 +70,17 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-h2{
+h2 {
   font-size: 3em;
 }
 
-h4{
+h4 {
   color: #213547;
 }
 
-h5{
+h5 {
   font-size: 1em;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid #213547;
-  background-color: #213547;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: background-color 0.25s;
-}
-button:hover {
-  color: #ffffff;
-  background-color: #213547;
-  border-color: #ffffff;
-}
-button:focus,
-button:focus-visible {
-  outline: none;
-}
-
-.link_btn{
-  border: 1px solid #213547;
-  padding: 5px;
-  border-radius: 5px;
-  color: #213547;
-  background-color: #fff;
-}
-
-.link_btn:hover{
-  border: 1px solid #fff;
-  background-color: #213547;
-  color: #fff;
-}
-
-
 
 @media (prefers-color-scheme: light) {
   :root {

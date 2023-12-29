@@ -1,50 +1,59 @@
-import { BsPlayFill } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import ProjectCard from "../components/Projects/project_card";
+
+const projects = [
+  {
+    category: "Mobile App",
+    title: "AfriMed",
+    description:
+      "This is a platform that would connect buyers and suppliers together and easy transaction betweeen them.",
+    imageUrl: "src/assets/images/Mobile-App-developer-3.png",
+  },
+  {
+    category: "Web App",
+    title: "Manivas",
+    description:
+      "This is a web application that would bridge the gap between local and international money transfers.",
+    imageUrl: "src/assets/images/web_app_development.png",
+  },
+  {
+    category: "Web App",
+    title: "Manivas",
+    description:
+      "This is a web application that would bridge the gap between local and international money transfers.",
+    imageUrl: "src/assets/images/web_app_development.png",
+  },
+  {
+    category: "Web App",
+    title: "Manivas",
+    description:
+      "This is a web application that would bridge the gap between local and international money transfers.",
+    imageUrl: "src/assets/images/web_app_development.png",
+  },
+];
+
+const projectList = projects.map((project) => (
+  <ProjectCard props={{ project: project }} />
+));
 
 export default function Projects() {
-
   return (
-    <section id="projects">
-        <h2>Projects</h2>
-        <div className="project">
-            <img src="project-screenshot.jpg" alt="Project Screenshot"/>
-            <div className="project-details">
-              <h3>Smart Muscle Fitness Center</h3>
-              <p>This a smart gym that serves as a digital hub for gym-related activities, offering users a user-friendly and engaging experience while effectively promoting the gym's offerings.</p>
-              <p>Technologies used: ReactJS</p>
-              <div className="project-links">
-                  <a href="github-link" className="btn-secondary"><FaGithub/></a>
-                <a href="https://smartmuscle.vercel.app" className="btn-primary" target="_blank"><BsPlayFill/></a>
-              </div>
-              
-            </div>
+    <section id="projects" className="h-full flex flex-col justify-center p-24">
+      <h2 className="text-white/70">My Best Selected Portfolio</h2>
+      <p className="text-white/60">
+        The following are the best projects done during my career as a software
+        engineer.
+      </p>
+      <div className="flex flex-col items-center gap-4">
+        <div className="grid grid-cols-2 place-content-center h-fit">
+          {projectList}
         </div>
-        <div className="project">
-            <img src="project-screenshot.jpg" alt="Project Screenshot"/>
-            <div className="project-details">
-              <h3>StreetMatt</h3>
-              <p>This is an ecommerce website that allows it's customers to shop items at a cheap, pocket-friendly and discounted prize.</p>
-              <p>Technologies used: ReactJS, NodeJS</p>
-              <div className="project-links">
-                <a href="github-link" className="btn-secondary"><FaGithub/></a>
-                <a href="https://streetmatt.vercel.app" className="btn-primary" target="_blank"><BsPlayFill/></a>
-              </div>
-            </div>
-            
-        </div>
-        <div className="project">
-            <img src="project-screenshot.jpg" alt="Project Screenshot"/>
-            <div className="project-details">
-              <h3>Wheels By Mamicha</h3>
-              <p>This is a car blogging site that has the latest articles and news on various trending automobiles</p>
-              <p>Technologies used: ReactJS</p>
-              <div className="project-links">
-                <a href="github-link" className="btn-secondary"><FaGithub/></a>
-                <a href="https://streetmatt.vercel.app" className="btn-primary" target="_blank"><BsPlayFill/></a>
-              </div>
-            </div>
-            
-        </div>
-      </section>
+        <Link
+          to=""
+          className="bg-yellow-800/50 hover:bg-yellow-800 text-yellow-600 px-5 py-2.5 rounded-md">
+          View More
+        </Link>
+      </div>
+    </section>
   );
 }
