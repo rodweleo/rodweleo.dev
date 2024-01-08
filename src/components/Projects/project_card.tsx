@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const ProjectCard = ({ props }: any) => {
   return (
-    <div className="sm:w-2/4 xl:w-2/4 flex flex-col gap-2.5 bg-gray-800 rounded-md">
+    <div className="w-72 flex flex-col gap-2.5 bg-gray-800 rounded-md">
       <img
         src={props.project.imageUrl}
         alt={props.project.title}

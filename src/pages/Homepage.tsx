@@ -1,13 +1,17 @@
+import About from "../components/about";
 import ContactMe from "../components/Contact Me";
-import MainService from "../components/Services";
-import About from "./About";
+import Portfolio from "../components/Services/portfolio";
+import Services from "../components/Services/services";
+import Hero from "./hero";
 import Projects from "./Projects";
 
 const Homepage = () => {
   return (
     <>
+      <Hero />
       <About />
-      <MainService />
+      <Services />
+      <Portfolio />
       <Projects />
       <ContactMe />
     </>

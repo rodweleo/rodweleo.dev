@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ProjectCard from "../components/Projects/project_card";
+import ProjectList from "../components/Projects/projects_list";
 
 const projects = [
   {
@@ -32,17 +32,12 @@ const projects = [
   },
 ];
 
-const projectList = projects.map((project) => (
-  <ProjectCard props={{ project: project }} />
-));
-
 export default function Projects() {
   return (
-    <section id="projects" className="h-screen flex flex-col">
-      <h2 className="text-white">Projects</h2>
-      <div className="grid grid-cols-2 place-items-center gap-y-10">
-        {projectList}
-      </div>
+    <section id="projects" className="h-auto flex flex-col gap-5 p-5">
+      <h2 className="text-white text-5xl">Projects</h2>
+      <ProjectList projects={projects} />
+
       <div className="flex flex-col items-center gap-4">
         <Link
           to=""

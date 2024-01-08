@@ -1,9 +1,13 @@
 const Service = ({ props }: any) => {
   return (
-    <div className="bg-blue-700 w-auto p-2.5 rounded-md flex flex-col gap-2.5">
-      <i
-        className={`${props.service.icon} service-icon w-fit text-blue-500 font-bold bg-blue-900/40 p-3 rounded-full`}></i>
-      <h3 className="text-white">{props.service.title}</h3>
+    <div className="w-72 flex flex-col gap-2.5 bg-gray-800 p-5 rounded-md gap-2.5 leading-loose">
+      <h3 className="text-white text-xl flex gap-2.5 items-center">
+        {" "}
+        <i
+          className={`${props.service.icon} scale-150 w-fit text-blue-500 font-bold `}></i>
+        {props.service.title}
+      </h3>
+      <p className="text-white/50 ">{props.service.description}</p>
     </div>
   );
 };
