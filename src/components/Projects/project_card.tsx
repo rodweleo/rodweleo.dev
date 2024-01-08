@@ -2,21 +2,22 @@ import { Link } from "react-router-dom";
 
 const ProjectCard = ({ props }: any) => {
   return (
-    <div className="w-2/4 flex flex-col gap-2.5">
-      <h3 className="text-yellow-600">{props.project.category}</h3>
-      <h2 className="text-2xl text-white">{props.project.title}</h2>
+    <div className="sm:w-2/4 xl:w-2/4 flex flex-col gap-2.5 bg-gray-800 rounded-md">
       <img
         src={props.project.imageUrl}
         alt={props.project.title}
-        className="w-60 rounded-md"
+        className="w-full object-fill"
       />
-      <p className="text-white/80">{props.project.description}</p>
-      <Link
-        to="https://smartmuscle.vercel.app"
-        target="_blank"
-        className="w-fit bg-yellow-800/50 hover:bg-yellow-800 px-5 py-2 rounded-md">
-        <i className="fa-solid fa-play text-yellow-600"></i>
-      </Link>
+      <div className="flex flex-col justify-between h-full p-2">
+        <h2 className="text-2xl text-white">{props.project.title}</h2>
+        <p className="text-white">{props.project.description}</p>
+        <Link
+          to="https://smartmuscle.vercel.app"
+          target="_blank"
+          className="w-fit bg-blue-500 hover:bg-blue-800 px-5 py-1 rounded-md">
+          <i className="fa-solid fa-play text-blue-900"></i>
+        </Link>
+      </div>
     </div>
   );
 };

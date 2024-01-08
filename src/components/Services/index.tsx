@@ -4,14 +4,13 @@ import Abilities from "./what_I_can_do";
 
 const MainService = () => {
   return (
-    <section className="main-services relative">
-      <div className="flex w-full h-full justify-center items-center">
+    <section className="bg-blue-900 h-screen flex flex-col items-center justify-center">
+      <div className="flex flex-wrap w-full justify-around items-center">
         <Abilities />
         <MainAbilities />
       </div>
-      <div className="w-full h-fit absolute bottom-[-10%]">
-        <Services />
-      </div>
+
+      <Services />
     </section>
   );
 };

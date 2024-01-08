@@ -1,18 +1,18 @@
 import { NavBar } from "./Navigation";
 import { NavLink } from "react-router-dom";
-import { SocialLinks } from "./social_links";
 
 export default function Header() {
   return (
-    <header className="px-5">
-      <NavLink to="/" style={{ color: "white" }} className="header-logo">
+    <header className="bg-blue-500 flex items-center justify-between sticky top-0 z-50 bg-opacity-80">
+      <NavLink
+        to="/"
+        style={{ color: "white" }}
+        className="flex items-center gap-1">
         <img src="./logo.png" alt="" />
         rodweleo.dev
       </NavLink>
 
       <NavBar />
-
-      <SocialLinks />
     </header>
   );
 }

@@ -54,7 +54,7 @@ const testimonialList = testimonials.map((testimonial) => (
 
 const Testimonials = () => {
   return (
-    <section className=" w-full relative">
+    <section className="h-screen w-full relative">
       <h2>Testimonials</h2>
       <section className="flex p-20 overflow-x-auto gap-2 justify-between w-full ">
         {testimonialList}

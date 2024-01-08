@@ -20,7 +20,7 @@ const serviceList = services.map((service) => (
 ));
 const Services = () => {
   return (
-    <section className="flex w-full justify-center gap-10">
+    <section className="mt-10 flex w-full justify-center gap-10 h-fit">
       {serviceList}
     </section>
   );

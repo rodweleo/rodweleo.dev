@@ -38,19 +38,15 @@ const projectList = projects.map((project) => (
 
 export default function Projects() {
   return (
-    <section id="projects" className="h-full flex flex-col justify-center p-24">
-      <h2 className="text-white/70">My Best Selected Portfolio</h2>
-      <p className="text-white/60">
-        The following are the best projects done during my career as a software
-        engineer.
-      </p>
+    <section id="projects" className="h-screen flex flex-col">
+      <h2 className="text-white">Projects</h2>
+      <div className="grid grid-cols-2 place-items-center gap-y-10">
+        {projectList}
+      </div>
       <div className="flex flex-col items-center gap-4">
-        <div className="grid grid-cols-2 place-content-center h-fit">
-          {projectList}
-        </div>
         <Link
           to=""
-          className="bg-yellow-800/50 hover:bg-yellow-800 text-yellow-600 px-5 py-2.5 rounded-md">
+          className="bg-blue-800/40 hover:bg-blue-800 text-white px-5 py-2.5 rounded-md">
           View More
         </Link>
       </div>

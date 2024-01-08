@@ -10,7 +10,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col w-2/4 gap-2.5">
+      className="w-2/4 flex flex-col  gap-2.5">
       <label className="text-white w-full">
         Name
         <input
@@ -41,7 +41,7 @@ const ContactForm = () => {
 
       <button
         type="submit"
-        className="w-fit bg-yellow-900/80 text-yellow-500 px-5 py-2.5 rounded-md hover:bg-yellow-900/30">
+        className="w-fit bg-blue-500 px-5 py-2.5 rounded-md hover:bg-blue-700 text-white">
         Submit
       </button>
     </form>

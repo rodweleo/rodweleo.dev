@@ -2,39 +2,42 @@ import { Link } from "react-router-dom";
 
 export default function About() {
   return (
-    <section id="about" className="flex justify-around h-[75vh]">
+    <section
+      id="about"
+      className="flex flex-wrap justify-around h-screen items-center">
       <div className="flex flex-col gap-5 w-fit">
         <div>
           <h2 className="text-white/50">I'm</h2>
           <div className="w-fit">
             <h1 className="text-white text-8xl">Rodwell Leo</h1>{" "}
-            <div className="bg-yellow-600 w-2/4 h-1" />
+            <div className="bg-blue-500 w-2/4 h-1" />
           </div>
         </div>
-        <p className="w-2/4 text-white/80 text-xl">
+        <p className="w-auto text-white/80 text-xl">
           A software engineer who provides services for digital solutions
-          through software design and development
+          through software design and development. Let's build quality products
+          in programming and design with my services.
         </p>
-      </div>
-
-      <div className="w-1/4 flex flex-col gap-2.5">
-        <h2 className="text-xl text-white/50">Services</h2>
-        <p className="text-white text-xl">
-          Let's build quality products in programming and design with my
-          services.
-        </p>
-        <Link to="" className="text-yellow-600">
-          Show more <i className="fa-solid fa-arrow-right"></i>
-        </Link>
         <ul className="flex p-0 gap-5">
           <li>
-            <i className="fa-brands fa-twitter text-yellow-600 bg-yellow-800/20 p-2.5 rounded-full"></i>
+            <Link to={""}>
+              <i className="fa-brands fa-linkedin text-blue-500 bg-blue-800/20 p-2.5 rounded-full cursor-pointer"></i>
+            </Link>
           </li>
           <li>
-            <i className="fa-brands fa-instagram text-yellow-600 bg-yellow-800/20 p-2.5 rounded-full"></i>
+            <Link to={""}>
+              <i className="fa-brands fa-twitter text-blue-500 bg-blue-800/20 p-2.5 rounded-full cursor-pointer"></i>
+            </Link>
           </li>
           <li>
-            <i className="fa-brands fa-pinterest text-yellow-600 bg-yellow-800/20 p-2.5 rounded-full"></i>
+            <Link to={""}>
+              <i className="fa-brands fa-instagram text-blue-500 bg-blue-800/20 p-2.5 rounded-full cursor-pointer"></i>
+            </Link>
+          </li>
+          <li>
+            <Link to={""}>
+              <i className="fa-brands fa-pinterest text-blue-500 bg-blue-800/20 p-2.5 rounded-full cursor-pointer"></i>
+            </Link>
           </li>
         </ul>
       </div>

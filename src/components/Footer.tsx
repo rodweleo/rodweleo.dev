@@ -4,7 +4,10 @@ export default function Footer() {
   return (
     <footer>
       <hr />
-      <p>&copy; {`Rodwell Leo ${year}`}. All Rights Reserved | <a href="privacy-policy-link">Privacy Policy</a></p>
+      <p className="text-white">
+        &copy; {`Rodwell Leo ${year}`}. All Rights Reserved |{" "}
+        <a href="privacy-policy-link">Privacy Policy</a>
+      </p>
     </footer>
   );
 }
