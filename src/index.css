@@ -11,12 +11,19 @@
   -webkit-text-size-adjust: 100%;
 }
 
+* {
+  box-sizing: border-box;
+  position: relative;
+  min-width: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   background-color: #212529;
+  min-height: 100dvh;
 }
 
 a {
@@ -32,15 +39,17 @@ label {
   flex-direction: column;
 }
 
-footer {
-  position: relative;
-  text-align: center;
-  color: black;
-  bottom: 0;
-  padding: 10px;
-  width: 96%;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-wrap: balance;
 }
 
+p {
+  text-wrap: pretty;
+}
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -55,19 +64,6 @@ h4 {
 
 h5 {
   font-size: 1em;
-}
-
-nav a {
-  padding: 10px 5px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  gap: 2.5px;
-}
-
-nav a.active {
-  background-color: #007bff;
-  color: white;
 }
 
 @media (prefers-color-scheme: light) {

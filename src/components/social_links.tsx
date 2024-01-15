@@ -1,20 +1,23 @@
-import { FaGithub } from "react-icons/fa";
-import { BsLinkedin } from "react-icons/bs";
-import { HiMail } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 export function SocialLinks() {
   return (
-    <ul className="social_links">
-      <Link to="https://www.github.com/rodweleo" className="social_link">
-        <FaGithub />
-      </Link>
-      <Link to="https://www.linkedin.com/rodweleo" className="social_link">
-        <BsLinkedin />
-      </Link>
-      <Link to="mailto:leorodwel86@gmail.com" className="social_link">
-        <HiMail />
-      </Link>
+    <ul className="flex p-0 gap-5">
+      <li>
+        <Link to={""}>
+          <i className="fa-brands fa-linkedin text-white bg-blue-800/20 p-2.5 rounded-full cursor-pointer"></i>
+        </Link>
+      </li>
+      <li>
+        <Link to={""}>
+          <i className="fa-brands fa-twitter text-white bg-blue-800/20 p-2.5 rounded-full cursor-pointer"></i>
+        </Link>
+      </li>
+      <li>
+        <Link to={""}>
+          <i className="fa-brands fa-instagram text-white bg-blue-800/20 p-2.5 rounded-full cursor-pointer"></i>
+        </Link>
+      </li>
     </ul>
   );
 }
