@@ -18,14 +18,7 @@ const projects = [
   },
   {
     category: "Web App",
-    title: "Manivas",
-    description:
-      "This is a web application that would bridge the gap between local and international money transfers.",
-    imageUrl: "src/assets/images/web_app_development.png",
-  },
-  {
-    category: "Web App",
-    title: "Manivas",
+    title: "LinkApp",
     description:
       "This is a web application that would bridge the gap between local and international money transfers.",
     imageUrl: "src/assets/images/web_app_development.png",

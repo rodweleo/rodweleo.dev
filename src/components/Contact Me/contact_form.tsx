@@ -50,51 +50,56 @@ const ContactForm = () => {
       onSubmit={(e) => handleSubmit(e)}
       ref={contactFormRef as LegacyRef<HTMLFormElement>}
       className="w-auto flex flex-col gap-2.5">
-      <label className="text-white w-full">
-        Name
-        <input
-          required
-          type="text"
-          className="text-black px-2 h-10 rounded-md outline-none focus:shadow-xl"
-          name="name"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
-        />
-      </label>
+      <p className="text-white text-3xl">
+        Want to get in touch? I'd love to hear from you
+      </p>
+      <div className="leading-loose">
+        <label className="text-white w-full">
+          Name
+          <input
+            required
+            type="text"
+            className="text-black px-2 h-10 rounded-md outline-none focus:shadow-xl"
+            name="name"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+          />
+        </label>
 
-      <label className="text-white w-full">
-        Email Address
-        <input
-          required
-          type="email"
-          className="text-black px-2 h-10 rounded-md outline-none focus:shadow-xl"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </label>
+        <label className="text-white w-full">
+          Email Address
+          <input
+            required
+            type="email"
+            className="text-black px-2 h-10 rounded-md outline-none focus:shadow-xl"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </label>
 
-      <label className="text-white w-full">
-        Message
-        <textarea
-          required
-          name="message"
-          onChange={(e) => setMessage(e.target.value)}
-          value={message}
-          className="text-black px-2 h-24 rounded-md outline-none focus:shadow-xl"></textarea>
-      </label>
+        <label className="text-white w-full">
+          Message
+          <textarea
+            required
+            name="message"
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}
+            className="text-black px-2 h-24 rounded-md outline-none focus:shadow-xl"></textarea>
+        </label>
 
-      <button
-        type="submit"
-        className="w-fit bg-blue-500 px-5 py-2.5 rounded-md hover:bg-blue-700 text-white">
-        {isSubmitting ? (
-          "..."
-        ) : (
-          <>
-            Send Message <i className="fa-solid fa-paper-plane"></i>
-          </>
-        )}
-      </button>
+        <button
+          type="submit"
+          className="w-fit bg-blue-500 px-5 py-2.5 rounded-md hover:bg-blue-700 text-white mt-2.5">
+          {isSubmitting ? (
+            "..."
+          ) : (
+            <>
+              Send Message <i className="fa-solid fa-paper-plane"></i>
+            </>
+          )}
+        </button>
+      </div>
     </form>
   );
 };

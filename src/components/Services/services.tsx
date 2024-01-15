@@ -2,12 +2,6 @@ import Service from "../service";
 
 const services = [
   {
-    icon: "fa-solid fa-globe",
-    title: "Custom Software Development",
-    description:
-      "Unlock the full potential of your business with our custom software development services. We specialize in tailoring software solutions to meet your unique needs, whether it's building a robust web application, a scalable backend system, or a specialized tool to streamline your operations. From concept to deployment, our team of experienced engineers is committed to delivering high-quality, efficient, and secure software tailored to your specifications.",
-  },
-  {
     icon: "fa-solid fa-mobile-screen-button",
     title: "Mobile App Development",
     description:
@@ -32,12 +26,6 @@ const services = [
     description:
       "Protect your digital assets with our cybersecurity services. Our engineers implement robust security measures to safeguard your applications and data. From conducting security assessments to implementing encryption, authentication, and authorization protocols, we prioritize the integrity and confidentiality of your systems, ensuring compliance with industry standards and regulations",
   },
-  {
-    icon: "fa-solid fa-mobile-screen-button",
-    title: "DevOps and Continuous Integration/Continuous Deployment (CI/CD)",
-    description:
-      "Boost your development workflow with our DevOps and CI/CD services. We integrate best practices to streamline collaboration between development and operations teams, automate testing and deployment processes, and enhance the overall efficiency of your software development lifecycle. Experience faster delivery, improved quality, and increased collaboration with our DevOps expertise.",
-  },
 ];
 
 const serviceList = services.map((service) => (
@@ -49,7 +37,9 @@ const Services = () => {
       <h2 className="text-white text-5xl">
         <span className="text-blue-500">My</span> Services
       </h2>
-      <div className="flex flex-wrap w-full justify-around ">{serviceList}</div>
+      <div className="flex flex-wrap w-full justify-between items-center">
+        {serviceList}
+      </div>
     </section>
   );
 };
