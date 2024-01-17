@@ -1,6 +1,6 @@
 const Service = ({ props }: any) => {
   return (
-    <div className="w-72 flex flex-col gap-2.5 bg-gray-800 p-5 rounded-md gap-2.5 leading-loose">
+    <div className="w-72 flex flex-col bg-gray-800 p-5 rounded-md gap-2.5 leading-loose mt-2.5">
       <h3 className="text-white text-xl flex gap-2.5 items-center">
         {" "}
         <i

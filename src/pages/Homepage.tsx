@@ -1,12 +1,14 @@
 import ContactMe from "../components/Contact Me";
-import Portfolio from "../components/Services/portfolio";
-import Services from "../components/Services/services";
+import { NavBar } from "../components/Navigation";
+import Portfolio from "../components/portfolio/index";
+import Services from "../components/Services/index";
 import Hero from "./hero";
 import Projects from "./Projects";
 
 const Homepage = () => {
   return (
     <>
+      <NavBar />
       <Hero />
       <Services />
       <Portfolio />

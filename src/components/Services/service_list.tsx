@@ -33,12 +33,9 @@ const serviceList = services.map((service) => (
 ));
 const Services = () => {
   return (
-    <section id="services" className="h-auto w-full p-5">
-      <h2 className="text-white text-5xl">Services</h2>
-      <div className="flex flex-wrap w-full justify-between items-center">
-        {serviceList}
-      </div>
-    </section>
+    <div className="flex flex-wrap w-full justify-between items-center">
+      {serviceList}
+    </div>
   );
 };
 

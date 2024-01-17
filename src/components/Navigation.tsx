@@ -1,35 +1,42 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 
 export const NavBar = () => {
-  const [showCloseTag, setShowCloseTag] = useState(false);
-  window.addEventListener("resize", () => {
-    if (window.innerWidth <= 640) {
-      setShowCloseTag(true);
-    } else {
-      setShowCloseTag(false);
-    }
-  });
+  useEffect(() => {
+    const navlinks = document.getElementsByClassName("nav-link");
+    //set the active nav link
+    navlinks[0].classList.add("active");
 
-  function closeNavBar() {
-    console.log("Closing");
-  }
+    for (let i = 0; i < navlinks.length; i++) {
+      const navLink = navlinks[i];
+      navLink.addEventListener("click", (event) => {
+        // Remove "active" class from all links
+        for (let j = 0; j < navlinks.length; j++) {
+          navlinks[j].classList.remove("active");
+        }
+        // Add "active" class to the clicked link
+        navLink.classList.add("active");
+      });
+    }
+  }, []);
+
   return (
-    <nav className="flex items-center relative justify-center">
-      {showCloseTag && (
-        <i
-          className="fa-solid fa-x text-red-500"
-          onClick={() => closeNavBar()}></i>
-      )}
-      <ul className="flex gap-2 text-white/50">
-        <li>
-          <NavLink to="">Home</NavLink>
+    <nav>
+      <ul className="flex flex-col gap-5 text-white/50 bg-blue-200 w-fit fixed right-0 top-1/3 z-50 bg-opacity-30 rounded-l-xl px-1 py-5">
+        <li className="nav-link">
+          <a href="#about-leo">About</a>
         </li>
-        <hr />
-        <li>
-          <NavLink to="">Portfolio</NavLink>
+        <li className="nav-link">
+          <a href="#services">Services</a>
         </li>
-        <hr />
+        <li className="nav-link">
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li className="nav-link">
+          <a href="#projects">Projects</a>
+        </li>
+        <li className="nav-link">
+          <a href="#contact-me">Contact Me</a>
+        </li>
       </ul>
     </nav>
   );

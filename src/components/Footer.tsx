@@ -17,14 +17,17 @@ export default function Footer() {
               <Link to="">About</Link>
             </li>
             <li>
-              <Link to="">Skills</Link>
+              <Link to="">Services</Link>
             </li>
 
+            <li>
+              <Link to="">Portfolio</Link>
+            </li>
             <li>
               <Link to="">Projects</Link>
             </li>
             <li>
-              <Link to="">Testimonials</Link>
+              <Link to="">Contact Me</Link>
             </li>
           </ul>
         </div>
@@ -32,7 +35,9 @@ export default function Footer() {
           <h2 className="text-xl text-white">Resources</h2>
           <ul className="text-white/40 leading-loose">
             <li>
-              <Link to="">Github</Link>
+              <Link to="https://www.github.com/rodweleo" target="_blank">
+                Github
+              </Link>
             </li>
           </ul>
         </div>

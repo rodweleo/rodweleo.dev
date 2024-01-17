@@ -12,7 +12,7 @@ const ProjectCard = ({ props }: any) => {
         <h2 className="text-2xl text-white">{props.project.title}</h2>
         <p className="text-white">{props.project.description}</p>
         <Link
-          to="https://smartmuscle.vercel.app"
+          to={props.project.link}
           target="_blank"
           className="w-fit bg-blue-500 hover:bg-blue-800 px-5 py-1 rounded-md">
           <i className="fa-solid fa-play text-blue-900"></i>

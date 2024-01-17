@@ -16,7 +16,7 @@ export default function Header() {
     }
   });
   return (
-    <header className="bg-blue-500 flex items-center justify-between sticky top-0 z-50 bg-opacity-80 p-5 h-20">
+    <header className="bg-blue-500 flex items-center justify-center sticky top-0 z-50 bg-opacity-80 p-5 h-20">
       <NavLink
         to="/"
         style={{ color: "white" }}
@@ -26,12 +26,6 @@ export default function Header() {
           rodwe<span className="text-blue-900">leo</span>
         </p>
       </NavLink>
-      {showNavBar && <NavBar />}
-      {showNavBars && (
-        <button className="" onClick={() => setShowNavBar(true)}>
-          <FaBars />
-        </button>
-      )}
     </header>
   );
 }
