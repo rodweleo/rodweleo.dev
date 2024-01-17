@@ -8,7 +8,7 @@ export const NavBar = () => {
 
     for (let i = 0; i < navlinks.length; i++) {
       const navLink = navlinks[i];
-      navLink.addEventListener("click", (event) => {
+      navLink.addEventListener("click", () => {
         // Remove "active" class from all links
         for (let j = 0; j < navlinks.length; j++) {
           navlinks[j].classList.remove("active");
