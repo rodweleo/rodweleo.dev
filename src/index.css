@@ -31,7 +31,7 @@ body {
 nav {
   position: fixed;
   right: 5vh;
-  top: 4vh;
+  top: 2vh;
   z-index: 9999;
   display: flex;
   gap: 5vh;
@@ -47,7 +47,7 @@ nav a {
   width: fit-content;
   font-weight: bold;
   text-align: center;
-  color: gray;
+  color: lightgrey;
 }
 
 nav a:hover {
