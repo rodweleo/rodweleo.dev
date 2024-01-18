@@ -12,23 +12,12 @@ export default function Footer() {
       <section className="flex flex-wrap justify-between">
         <div>
           <h2 className="text-xl text-white">Portfolio</h2>
-          <ul className="text-white/40 leading-loose">
-            <li>
-              <Link to="">About</Link>
-            </li>
-            <li>
-              <Link to="">Services</Link>
-            </li>
-
-            <li>
-              <Link to="">Portfolio</Link>
-            </li>
-            <li>
-              <Link to="">Projects</Link>
-            </li>
-            <li>
-              <Link to="">Contact Me</Link>
-            </li>
+          <ul className="text-white/40 leading-10 flex flex-col ">
+            <a href="#about-leo">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact-me">Contact</a>
           </ul>
         </div>
         <div>

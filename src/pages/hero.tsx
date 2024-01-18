@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { SocialLinks } from "../components/social_links";
 
 export default function Hero() {
   return (
@@ -18,23 +18,7 @@ export default function Hero() {
           professional Software Engineer, I have acquired the necessary skills
           to build great software applications from web to mobile applications.
         </p>
-        <ul className="flex p-0 gap-5">
-          <li>
-            <Link to="https://www.linkedin.com/in/rodweleo" target="_blank">
-              <i className="fa-brands fa-linkedin text-blue-500 bg-blue-800/20 p-2.5 rounded-full cursor-pointer"></i>
-            </Link>
-          </li>
-          <li>
-            <Link to="https://github.com/rodweleo" target="_blank">
-              <i className="fa-brands fa-github text-blue-500 bg-blue-800/20 p-2.5 rounded-full cursor-pointer"></i>
-            </Link>
-          </li>
-          <li>
-            <Link to="https://www.twitter.com/Onuonga_Leo" target="_blank">
-              <i className="fa-brands fa-twitter text-blue-500 bg-blue-800/20 p-2.5 rounded-full cursor-pointer"></i>
-            </Link>
-          </li>
-        </ul>
+        <SocialLinks />
       </div>
     </section>
   );

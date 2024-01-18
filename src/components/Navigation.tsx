@@ -13,31 +13,38 @@ export const NavBar = () => {
         for (let j = 0; j < navlinks.length; j++) {
           navlinks[j].classList.remove("active");
         }
-        // Add "active" class to the clicked link
+        // Add "active" class to the clicked link then close the nav bar
         navLink.classList.add("active");
+        document.getElementById("main-nav-bar")?.classList.remove("open");
       });
     }
   }, []);
 
+  function closeNavBar() {
+    const mainNavBar = document.getElementById("main-nav-bar");
+    mainNavBar?.classList.remove("open");
+  }
+
   return (
-    <nav>
-      <ul className="flex flex-col gap-5 text-white/50 bg-blue-200 w-fit fixed right-0 top-1/3 z-50 bg-opacity-30 rounded-l-xl px-1 py-5">
-        <li className="nav-link">
-          <a href="#about-leo">About</a>
-        </li>
-        <li className="nav-link">
-          <a href="#services">Services</a>
-        </li>
-        <li className="nav-link">
-          <a href="#portfolio">Portfolio</a>
-        </li>
-        <li className="nav-link">
-          <a href="#projects">Projects</a>
-        </li>
-        <li className="nav-link">
-          <a href="#contact-me">Contact Me</a>
-        </li>
-      </ul>
+    <nav id="main-nav-bar">
+      <i
+        className="fa-solid fa-close text-white scale-150 fixed right-0 mt-8 mr-5 cursor-pointer z-50"
+        onClick={() => closeNavBar()}></i>
+      <a href="#about-leo" className="nav-link">
+        About
+      </a>
+      <a href="#services" className="nav-link">
+        Services
+      </a>
+      <a href="#portfolio" className="nav-link">
+        Portfolio
+      </a>
+      <a href="#projects" className="nav-link">
+        Projects
+      </a>
+      <a href="#contact-me" className="nav-link">
+        Contact
+      </a>
     </nav>
   );
 };

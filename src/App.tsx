@@ -1,18 +1,15 @@
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { Routes, Route } from "react-router-dom";
-import Article from "./components/Article";
 import Homepage from "./pages/Homepage";
+import { NavBar } from "./components/Navigation";
 
 function App() {
   return (
     <>
-      <Header/>
-        <Routes>
-          <Route path='/' element={<Homepage/>}/>
-          <Route path='articles/:id' element={<Article/>}/>
-        </Routes>
+      <Header />
+      <NavBar />
+      <Homepage />
       <Footer />
     </>
   );
