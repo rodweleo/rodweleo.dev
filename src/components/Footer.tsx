@@ -5,9 +5,12 @@ export default function Footer() {
 
   return (
     <footer className="bg-blue-800/20 p-5 flex flex-col gap-5 w-full bottom-0">
-      <h2 className="text-white text-4xl">
-        rodwe<span className="text-blue-400">leo</span>
-      </h2>
+      <div className="flex items-center">
+        <img src="/images/logo.png" alt="Rodwell Leo" height="30" width="30" />
+        <h2 className="text-white text-xl font-bold">
+          rodwe<span className="text-blue-400">leo</span>
+        </h2>
+      </div>
       <section className="flex flex-wrap justify-between">
         <div>
           <h2 className="text-xl text-white">Portfolio</h2>

@@ -6,7 +6,7 @@ const projects = [
     title: "AfriMed",
     description:
       "This is a platform that would connect buyers and suppliers of medical equipment and products together and easy transaction betweeen them.",
-    imageUrl: "src/assets/images/Mobile-App-developer-3.png",
+    imageUrl: "/images/Mobile-App-developer-3.png",
     link: "https://www.afrimed.com",
   },
   {
@@ -14,7 +14,7 @@ const projects = [
     title: "Manivas",
     description:
       "This is a web application that would bridge the gap between local and international money transfers.",
-    imageUrl: "src/assets/images/web_app_development.png",
+    imageUrl: "/images/web_app_development.png",
     link: "https://www.manivas.com",
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     title: "LinkApp",
     description:
       "This is a web application that connects people around the world.",
-    imageUrl: "src/assets/images/web_app_development.png",
+    imageUrl: "/images/web_app_development.png",
     link: "https://linkapp.vercel.app",
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     title: "Smart Muscle",
     description:
       "This is a web application that helps in marketing and business management for a gym centre.",
-    imageUrl: "src/assets/images/smart-muscle.jpeg",
+    imageUrl: "/images/smart-muscle.jpeg",
     link: "https://smartmuscle.vercel.app",
   },
 ];
