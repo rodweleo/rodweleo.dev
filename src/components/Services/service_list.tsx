@@ -1,4 +1,4 @@
-import Service from "../service";
+import ServiceListItem from "./service_list_item";
 
 const services = [
   {
@@ -28,15 +28,14 @@ const services = [
   },
 ];
 
-const serviceList = services.map((service) => (
-  <Service props={{ service: service }} />
-));
-const Services = () => {
+const ServiceList = () => {
   return (
     <div className="flex flex-wrap w-full justify-between items-center">
-      {serviceList}
+      {services.map((service, index: number) => (
+        <ServiceListItem service={service} key={index} />
+      ))}
     </div>
   );
 };
 
-export default Services;
+export default ServiceList;

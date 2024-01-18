@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { SocialLinks } from "./social_links";
 
 export default function Footer() {
@@ -24,9 +23,9 @@ export default function Footer() {
           <h2 className="text-xl text-white">Resources</h2>
           <ul className="text-white/40 leading-loose">
             <li>
-              <Link to="https://www.github.com/rodweleo" target="_blank">
+              <a href="https://www.github.com/rodweleo" target="_blank">
                 Github
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

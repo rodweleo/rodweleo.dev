@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import ProjectList from "../components/Projects/projects_list";
+import ProjectCard from "../components/Projects/project_card";
 
 const projects = [
   {
@@ -31,7 +30,7 @@ const projects = [
     title: "Smart Muscle",
     description:
       "This is a web application that helps in marketing and business management for a gym centre.",
-    imageUrl: "src/assets/images/web_app_development.png",
+    imageUrl: "src/assets/images/smart-muscle.jpeg",
     link: "https://smartmuscle.vercel.app",
   },
 ];
@@ -40,14 +39,18 @@ export default function Projects() {
   return (
     <section id="projects" className="h-auto flex flex-col gap-5 p-5">
       <h2 className="text-white text-5xl">Projects</h2>
-      <ProjectList projects={projects} />
+      <section className="flex flex-wrap w-full justify-between gap-5">
+        {projects.map((project: any, index: number) => (
+          <ProjectCard project={project} key={index} />
+        ))}
+      </section>
 
       <div className="flex flex-col items-center gap-4">
-        <Link
-          to=""
+        <a
+          href=""
           className="bg-blue-800/40 hover:bg-blue-800 text-white px-5 py-2.5 rounded-md">
           View More
-        </Link>
+        </a>
       </div>
     </section>
   );
