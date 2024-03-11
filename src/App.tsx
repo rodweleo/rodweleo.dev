@@ -5,12 +5,11 @@ import Homepage from "./pages/Homepage";
 import { NavBar } from "./components/Navigation";
 import { Routes, Route } from "react-router-dom";
 import ContactMe from "./pages/contact";
-import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
     <>
-      <Analytics />
+
       <Header />
       <NavBar />
       <Routes>
