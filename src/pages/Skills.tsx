@@ -88,8 +88,8 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="text-center space-y-4">
-      <h2 className="font-bold text-slate-200">Skills</h2>
+    <section id="skills" className="text-center space-y-4 min-h-screen">
+      <h2 className="font-bold text-slate-200 text-2xl">Skills</h2>
       <p className="font-bold text-xl text-slate-400">The technologies and tools I use:</p>
       <div className="flex flex-wrap w-full gap-10 justify-center">
         <SkillContainer skill_list={frontend_stack} header="Frontend" />

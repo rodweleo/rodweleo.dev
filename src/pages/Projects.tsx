@@ -14,6 +14,16 @@ const projects: Project[] = [
     images: [],
     technologies: []
   },
+  {
+    category: "Web App",
+    title: "Smart Muscle",
+    description:
+      "This is a web application that helps in marketing and business management for a gym centre.",
+    imageURL: "/images/smart-muscle.jpeg",
+    link: "https://smartmuscle.vercel.app",
+    images: [],
+    technologies: []
+  },
 ];
 
 export default function Projects() {
@@ -29,16 +39,17 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="h-auto flex flex-col gap-5 p-5">
-      <h2 className="text-white text-5xl font-bold">Projects</h2>
-      <section className="flex flex-wrap w-full justify-between gap-5">
-        {projects.map((project: any, index: number) => (
+    <section id="projects" className="min-h-screen flex flex-col items-center gap-5">
+      <h2 className="text-white text-2xl font-bold">Projects</h2>
+      <p className="font-bold text-slate-500 text-xl">Below are my latest projects:</p>
+      <section className="flex flex-wrap gap-10 justify-center">
+        {projects.map((project, index: number) => (
           <ProjectCard project={project} index={index} onClick={setSelectedProject} />
         ))}
       </section>
 
       <ProjectModal>
-        <section className="w-2/4 h-fit bg-slate-800 rounded-md relative flex items-center justi">
+        <section className="w-2/4 h-fit bg-slate-800 rounded-md relative flex max-lg:flex-wrap items-center justi">
           <i className="fa-solid fa-close text-slate-400 absolute top-0 right-0 m-2.5 cursor-pointer z-50 p-2 rounded-full hover:bg-slate-700" onClick={(e) => handleClose(e)}></i>
           <div className="flex items-center relative w-full h-full">
             <i className="fa-solid fa-angle-left absolute left-2 z-50 bg-slate-400/50 rounded-full p-2.5 cursor-pointer"></i>

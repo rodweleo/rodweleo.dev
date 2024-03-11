@@ -1,7 +1,7 @@
 const ServiceListItem = (service: any, key: number) => {
   return (
     <div
-      className="w-72 flex flex-col bg-gray-800 p-5 rounded-md gap-2.5 leading-loose mt-2.5"
+      className="w-72 flex flex-col bg-gray-800 p-5 rounded-md gap-2.5 leading-loose mt-2.5 cursor-pointer shadow hover:shadow-xl hover:shadow-blue-950 transition-all duration-300 hover:scale-[1.025]"
       key={key}>
       <h3 className="text-white text-xl flex gap-2.5 items-center">
         {" "}

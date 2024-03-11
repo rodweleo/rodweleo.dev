@@ -1,8 +1,8 @@
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="flex flex-col w-full h-[50vh] p-5 gap-2">
+    <section id="portfolio" className="flex flex-col w-full h-[50vh] p-5 gap-2 items-center">
       <h1 className="text-white">Portfolio</h1>
-      <section className="flex flex-wrap gap-5 justify-between items-center place-content-center">
+      <section className="grid grid-cols-2 gap-20 place-items-center w-fit">
         <div className="w-fit">
           <span className="text-blue-500 text-5xl font-bold text-center">
             5+

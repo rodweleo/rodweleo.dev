@@ -20,6 +20,7 @@
 html {
   scroll-behavior: smooth;
   height: auto;
+  scroll-margin-top: 50px;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
   min-height: 100dvh;
   margin: auto;
   position: relative;
+    scroll-margin-top: 50px;
 }
 
 
@@ -50,6 +52,13 @@ nav a {
   font-weight: bold;
   text-align: center;
   color: lightgrey;
+    scroll-margin-top: 50px;
+    transition: all ease-in-out;
+    transition-duration: 0.25s;
+}
+
+section{
+  scroll-margin-top: 100px;
 }
 
 nav a:hover {
@@ -60,7 +69,10 @@ nav a:hover {
 nav a.active {
   background-color: white;
   color: gray;
+  font-weight: bold;
 }
+
+
 
 label {
   display: flex;
@@ -79,7 +91,7 @@ p {
   text-wrap: pretty;
 }
 h1 {
-  font-size: 3.2em;
+  font-size: 1.5em;
   line-height: 1.1;
 }
 h2 {

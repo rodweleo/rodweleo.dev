@@ -30,7 +30,7 @@ const services = [
 
 const ServiceList = () => {
   return (
-    <div className="flex flex-wrap w-full justify-between items-center">
+    <div className="flex flex-wrap justify-center w-fit gap-5">
       {services.map((service, index: number) => (
         <ServiceListItem service={service} key={index} />
       ))}
