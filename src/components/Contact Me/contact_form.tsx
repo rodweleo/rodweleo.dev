@@ -90,7 +90,8 @@ const ContactForm = () => {
 
         <button
           type="submit"
-          className="w-fit bg-blue-500 px-5 py-2.5 rounded-md hover:bg-blue-700 text-white mt-2.5">
+          disabled
+          className=" disabled:bg-slate-700 disabled:text-slate-500 w-fit bg-blue-500 px-5 py-2.5 rounded-md hover:bg-blue-700 text-white mt-2.5">
           {isSubmitting ? (
             "..."
           ) : (

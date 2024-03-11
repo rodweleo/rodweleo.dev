@@ -1,128 +1,106 @@
-import { FaJava, FaReact ,FaNodeJs } from "react-icons/fa";
-import { SiMysql, SiCss3, SiJavascript, SiMongodb, SiGithub } from "react-icons/si";
-import { AiFillHtml5, AiFillApi } from "react-icons/ai"
-import { GrGraphQl } from "react-icons/gr"
+import { SkillContainer } from "../components/Skills/container/SkillContainer";
 
-const Skills = () =>{
+const Skills = () => {
 
-    const frontend_stack = [
-      {
-        name: "HTML5",
-        image: <AiFillHtml5 />,
-        url: "https://www.react/dev"
-      },
-      {
-        name: "JavaScript",
-        image: <SiJavascript />,
-        url: "https://www.react/dev"
-      },
-      {
-        name: "CSS3",
-        image: <SiCss3 />,
-        url: "https://www.react/dev"
-      },
-      {
-        name: "ReactJS",
-        image: <FaReact />,
-        url: "https://www.react/dev"
-      },
-    ]
-    const backend_stack = [
-      {
-        name: "NodeJS",
-        image: <FaNodeJs />,
-        url: "https://www.nodejs.org"
-      },
-      {
-        name: "Java",
-        image: <FaJava />,
-        url: "https://www.java.com"
-      },
-    ]
-    const database_stack = [
-      {
-        name: "SQL",
-        image: <SiMysql />,
-        url: "https://www.mysql.com/"
-      },
-      {
-      name: "MONGODB",
-      image: <SiMongodb />,
+  const frontend_stack = [
+
+    {
+      name: "HTML5",
+      image: "images/skills_images/icons8-html-480.png",
+      url: "https://www.react/dev"
+    },
+    {
+      name: "JavaScript",
+      image: "images/skills_images/icons8-javascript-240.png",
+      url: "https://www.react/dev"
+    },
+    {
+      name: "TypeScript",
+      image: "images/skills_images/icons8-typescript-480.png",
+      url: "https://www.typescriptlang.org/"
+    },
+    {
+      name: "CSS3",
+      image: "images/skills_images/icons8-css-480.png",
+      url: "https://www.react/dev"
+    },
+
+
+  ]
+  const backend_stack = [
+    {
+      name: "NodeJS",
+      image: "images/skills_images/icons8-nodejs-480.png",
+      url: "https://www.nodejs.org"
+    }
+  ]
+  const database_stack = [
+    {
+      name: "MySQL",
+      image: "images/skills_images/icons8-mysql-500.png",
+      url: "https://www.mysql.com/"
+    },
+    {
+      name: "MongoDB",
+      image: "images/skills_images/icons8-mongodb-96.png",
       url: "https://www.mongodb.com/"
-      }
+    },
+    {
+      name: "Firebase",
+      image: "images/skills_images/icons8-google-firebase-console-480.png",
+      url: "https://www.mongodb.com/"
+    }
 
-    ]
-    const version_stack = [
-      {
-        name: "GITHUB",
-        image: <SiGithub />,
-        url: "https://www.github.com/"
-        }
-    ]
+  ]
 
-    const api_stack = [
-      {
-        name: "GraphQL",
-        image: <GrGraphQl />,
-        url: "https://www.graphql.com/"
-        }, 
-        {
-          name: "REST API",
-          image: <AiFillApi />,
-          url: "https://www.github.com/"
-        }
-    ];
+  const framework_stack = [
+    {
+      name: "Flutter",
+      image: "images/skills_images/icons8-flutter-480.png",
+      url: "https://www.react/dev"
+    },
+    {
+      name: "ReactJS",
+      image: "images/skills_images/icons8-react-native-480.png",
+      url: "https://www.react/dev"
+    },
 
-    return(
-          <section id="skills">
-            <h2>Skills</h2>
-            <div className="container">
+  ]
+  const devops_stack = [
+    {
+      name: "Git",
+      image: "images/skills_images/icons8-git-480.png",
+      url: "https://www.github.com/"
+    },
+    {
+      name: "Docker",
+      image: "images/skills_images/icons8-docker-240.png",
+      url: "https://www.github.com/"
+    }
+  ]
 
-            
-            <div className="skill">
-              <h3>FRONTEND </h3>
-              <ul className="stack">
-                {frontend_stack.map((skill, index)=>(
-                  <li key={index}> {skill.image} {skill.name} </li>
-                ))}
-              </ul>
-            </div>
-            <div className="skill">
-              <h3>BACKEND</h3>
-              <ul className="stack">
-              {backend_stack.map((skill, index)=>(
-                  <li key={index}> {skill.image} {skill.name}  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="skill">
-              <h3>DATABASE </h3>
-              <ul className="stack">
-              {database_stack.map((skill, index)=>(
-                  <li key={index}> {skill.image} {skill.name} </li>
-                ))}
-              </ul>
-            </div>
-            <div className="skill">
-              <h3>APIs</h3>
-              <ul className="stack">
-              {api_stack.map((skill, index)=>(
-                  <li key={index}>{skill.image} {skill.name}  </li>
-                ))}
-              </ul>
-            </div>
+  const api_stack = [
+    {
+      name: "REST API",
+      image: "images/skills_images/icons8-client-server-66.png",
+      url: "https://www.github.com/"
+    }
+  ];
 
-            <div className="skill">
-              <h3>VERSION CONTROL </h3>
-              <ul className="stack">
-              {version_stack.map((skill, index)=>(
-                  <li key={index}> {skill.image} {skill.name}  </li>
-                ))}
-              </ul>
-            </div>
-            </div>
-          </section>
-    )
+  return (
+    <section id="skills" className="text-center space-y-4">
+      <h2 className="font-bold text-slate-200">Skills</h2>
+      <p className="font-bold text-xl text-slate-400">The technologies and tools I use:</p>
+      <div className="flex flex-wrap w-full gap-10 justify-center">
+        <SkillContainer skill_list={frontend_stack} header="Frontend" />
+        <SkillContainer skill_list={backend_stack} header="Backend" />
+        <SkillContainer skill_list={framework_stack} header="Frameworks " />
+        <SkillContainer skill_list={database_stack} header="Databases" />
+        <SkillContainer skill_list={api_stack} header="APIs" />
+        <SkillContainer skill_list={devops_stack} header="DevOps Tools" />
+      </div>
+    </section>
+  )
 }
 
 export default Skills

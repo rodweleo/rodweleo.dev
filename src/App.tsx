@@ -3,13 +3,20 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Homepage from "./pages/Homepage";
 import { NavBar } from "./components/Navigation";
+import { Routes, Route } from "react-router-dom";
+import ContactMe from "./pages/contact";
 
 function App() {
   return (
     <>
       <Header />
       <NavBar />
-      <Homepage />
+      <Routes>
+        <Route path="/*">
+          <Route index element={<Homepage />}></Route>
+          <Route path="contact-me" element={<ContactMe />}></Route>
+        </Route>
+      </Routes>
       <Footer />
     </>
   );

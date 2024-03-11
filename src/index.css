@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  height: auto;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
   margin: auto;
   position: relative;
 }
+
 
 nav {
   position: fixed;
@@ -81,7 +83,7 @@ h1 {
   line-height: 1.1;
 }
 h2 {
-  font-size: 3em;
+  font-size: 1em;
 }
 
 h4 {

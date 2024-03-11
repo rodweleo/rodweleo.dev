@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
   function openNavBar() {
     const mainNavBar = document.getElementById("main-nav-bar");
@@ -5,12 +7,12 @@ export default function Header() {
   }
   return (
     <header className="bg-blue-900 flex items-center justify-between sticky top-0 z-50 bg-opacity-80 p-5 h-20">
-      <a href="/" className="text-white flex items-center gap-1 font-bold">
+      <Link to="/" className="text-white flex items-center gap-1 font-bold">
         <img src="/images/logo.png" alt="Rodwell Leo" height="40" width="40" />
         <p>
           rodwe<span className="text-blue-400">leo</span>
         </p>
-      </a>
+      </Link>
 
       <i
         className="fa-solid fa-bars text-white cursor-pointer hidden"
