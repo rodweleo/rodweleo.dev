@@ -47,7 +47,7 @@ export default function Hero() {
         <SocialLinks />
 
         <div className="flex flex-wrap  items-center justify-center gap-5">
-          <a href="" download className=" shadow-md shadow-slate-800 border border-slate-400 bg-white font-bold px-10 py-5 rounded-full flex gap-2 items-center">
+          <a href="/downloads/Rodwell Leo's Resume.pdf" download className=" shadow-md shadow-slate-800 border border-slate-400 bg-white font-bold px-10 py-5 rounded-full flex gap-2 items-center">
             <i className="fa-solid fa-file-lines"></i>Download Resume
           </a>
           <Link to="contact-me" className="border border-slate-400 text-white font-bold px-10 py-5 rounded-full flex gap-2 items-center hover:bg-slate-400 transition-all duration-300"> <i className="fa-regular fa-message"></i> Contact Me</Link>
