@@ -11,7 +11,8 @@ const projects: Project[] = [
       "This is a web application that helps in marketing and business management for a gym centre.",
     imageURL: "/images/smart-muscle.jpeg",
     link: "https://smartmuscle.vercel.app",
-    images: []
+    images: [],
+    technologies: []
   },
 ];
 

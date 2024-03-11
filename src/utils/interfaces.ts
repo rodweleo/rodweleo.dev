@@ -10,4 +10,5 @@ export interface Project {
   imageURL: string;
   link: string;
   images: string[];
+  technologies: string[];
 }
