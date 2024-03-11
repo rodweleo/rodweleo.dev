@@ -1,0 +1,8 @@
+{
+  "name": "rodweleo.dev",
+  "version": 1.1,
+  "cleanUrls": true,
+  "installCommand": "npm install",
+  "outputDirectory": "build",
+  "trailingSlash": true
+}
