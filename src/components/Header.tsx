@@ -15,6 +15,7 @@ export default function Header() {
       </Link>
 
       <i
+        id="fa-bars"
         className="fa-solid fa-bars text-white cursor-pointer hidden"
         onClick={() => openNavBar()}></i>
     </header>

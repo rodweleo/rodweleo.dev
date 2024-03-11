@@ -146,10 +146,10 @@ h5 {
     display: flex;
   }
 
-  .fa-bars {
+  #fa-bars {
     display: flex;
   }
-  nav .fa-bars {
+  nav #fa-bars {
     display: none;
   }
 }
