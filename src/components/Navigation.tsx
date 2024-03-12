@@ -27,6 +27,9 @@ export const NavBar = () => {
       <NavLink to="experience" className="nav-link">
         Experience
       </NavLink>
+      <NavLink to="blog" className="nav-link">
+        Blog
+      </NavLink>
       <NavLink to="contact-me" className="nav-link">
         Contact
       </NavLink>

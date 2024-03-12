@@ -2,7 +2,7 @@ import { Experience } from "../../../utils/interfaces"
 
 export const ExperienceCard = ({ experience, index }: { experience: Experience, index: number }) => {
 
-    const handleClick = (e) => {
+    const handleClick = (e: any) => {
         if (e.target.getElementsByTagName("i")[0].classList.contains("fa-add")) {
             e.target.getElementsByTagName("i")[0].classList.remove("fa-add");
             e.target.getElementsByTagName("i")[0].classList.add("fa-minus")
