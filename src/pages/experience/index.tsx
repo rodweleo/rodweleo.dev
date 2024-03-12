@@ -12,7 +12,7 @@ export const ExperiencePage = () => {
                 to: "",
                 present: true
             },
-            summary: "",
+            summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quasi optio quod incidunt architecto consequuntur ipsum delectus et illum repellendus dicta, facere vero assumenda expedita dolores velit iure itaque nulla!",
             accomplishments: [
                 "Spearheaded the development of cutting-edge web and native applications, leveraging advanced technologies and Agile engineering practices to ensure optimal performance and user satisfaction",
                 "Collaborated closely with cross-functional teams to translate business requirements into technical solutions, driving competitive differentiation and enhancing the organisation's technology stack",
@@ -21,8 +21,7 @@ export const ExperiencePage = () => {
                 "Played a pivotal role in system testing, documentation, and user training, ensuring seamless adoption and utilisation of technology solutions across the organisation",
                 " Established and maintained strong relationships with internal stakeholders, fostering a culture of collaboration, transparency, and accountability."
             ],
-            techstack: [
-
+            techstack: ["ReactJS", "TypeScript", "NodeJS - ExpressJS", "MySQL", "Git", "Docker"
             ]
         }
     ]

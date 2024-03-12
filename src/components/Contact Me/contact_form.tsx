@@ -50,8 +50,9 @@ const ContactForm = () => {
       onSubmit={(e) => handleSubmit(e)}
       ref={contactFormRef as LegacyRef<HTMLFormElement>}
       className="w-auto flex flex-col gap-2.5">
-      <p className="text-white text-3xl">
-        Want to get in touch? I'd love to hear from you
+      <h3 className="text-slate-400 font-bold">Contact Me</h3>
+      <p className="text-white text-3xl font-bold">
+        Let's Work Together
       </p>
       <div className="leading-loose">
         <label className="text-white w-full">

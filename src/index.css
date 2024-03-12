@@ -45,34 +45,39 @@ nav .fa-close {
   display: none;
 }
 nav a {
-  border-radius: 5px;
+  border-radius: 20%;
   cursor: pointer;
   padding: 10px 20px;
   width: fit-content;
   font-weight: bold;
   text-align: center;
   color: lightgrey;
-    scroll-margin-top: 50px;
-    transition: all ease-in-out;
-    transition-duration: 0.25s;
-}
-
-section{
-  scroll-margin-top: 100px;
+  transition: all ease-in-out;
+  transition-duration: 0.25s;
+  position: relative;
 }
 
 nav a:hover {
   color: gray;
-  background: white;
+  border-bottom: 2px solid white;
 }
 
 nav a.active {
-  background-color: white;
-  color: gray;
+  border-bottom: 5px solid white;
+  color: white;
   font-weight: bold;
 }
 
 
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
 
 label {
   display: flex;
@@ -111,8 +116,13 @@ h5 {
     color: #213547;
     background-color: #ffffff;
   }
+  a{
+    font-weight: bold;
+    transition: all ease-in-out;
+    transition-duration: 0.25s;
+  }
   a:hover {
-    color: #747bff;
+    color: black;
   }
   button {
     background-color: #f9f9f9;

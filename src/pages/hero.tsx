@@ -2,6 +2,12 @@ import { Link } from "react-router-dom";
 import { SocialLinks } from "../components/social_links";
 
 export default function Hero() {
+  const Portfolio = [
+    {
+      content: "2.5+",
+      description: "Years of experience"
+    }
+  ]
   return (
     <section
       id="about-leo"
@@ -13,41 +19,26 @@ export default function Hero() {
             <span className="text-blue-500 font-bold"> Rodwell Leo</span>
           </p>{" "}
         </h1>
-        <p className="text-white/80 leading-loose text-3xl font-bold">
+        <p className="text-white/80 leading-loose text-3xl font-bold sm:w-[600px]">
           Experienced <b className="text-blue-500">software engineer</b> with a focus on full-stack development and  mobile development.
         </p>
-        <div className="flex space-x-5 flex-wrap justify-center items-center gap-5">
-          <div className="flex w-fit">
-            <p className="bg-slate-400 rounded-l-full p-5 font-bold text-2xl">
-              +2.5
-            </p>
-            <p className="border border-slate-400 rounded-r-full text-slate-400 text-2xl p-5">
-              Years of Experience
-            </p>
-          </div>
+        <div className="flex flex-wrap justify-center items-center space-x-2">
+          {Portfolio.map((portfolio, index: number) => (
+            <div className="flex border border-slate-400 rounded-full" key={index}>
+              <p className="bg-slate-400 rounded-l-full p-2 font-bold text-2xl text-center">
+                {portfolio.content}
+              </p>
+              <p className="rounded-r-full text-slate-400 text-2xl p-2">
+                {portfolio.description}
+              </p>
+            </div>
+          ))}
 
-          <div className="flex w-fit">
-            <p className="bg-slate-400 rounded-l-full p-5 font-bold text-2xl">
-              100K
-            </p>
-            <p className="border border-slate-400 rounded-r-full text-slate-400 text-2xl p-5">
-              Lines of Code Written
-            </p>
-          </div>
-
-          <div className="flex w-fit ">
-            <p className="bg-slate-400 rounded-l-full w-fit p-5 font-bold text-2xl">
-              +2.5
-            </p>
-            <p className="border border-slate-400 rounded-r-full text-slate-400 text-2xl p-5">
-              Years of Experience
-            </p>
-          </div>
         </div>
         <SocialLinks />
 
         <div className="flex flex-wrap  items-center justify-center gap-5">
-          <a href="/downloads/Rodwell Leo's Resume.pdf" download className=" shadow-md shadow-slate-800 border border-slate-400 bg-white font-bold px-10 py-5 rounded-full flex gap-2 items-center">
+          <a href="/downloads/Rodwell Leo's Resume.pdf" download className=" shadow-md shadow-slate-800 border border-slate-400 bg-white font-bold px-10 py-5 rounded-full flex gap-2 items-center text-black">
             <i className="fa-solid fa-file-lines"></i>Download Resume
           </a>
           <Link to="contact-me" className="border border-slate-400 text-white font-bold px-10 py-5 rounded-full flex gap-2 items-center hover:bg-slate-400 transition-all duration-300"> <i className="fa-regular fa-message"></i> Contact Me</Link>
