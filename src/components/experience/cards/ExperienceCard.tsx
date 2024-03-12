@@ -16,7 +16,7 @@ export const ExperienceCard = ({ experience, index }: { experience: Experience, 
             <h1 className="font-bold text-slate-200">{experience.title}</h1>
             <h2 className="font-bold text-slate-400">{experience.company}</h2>
             <h3 className="text-slate-500"><i>{experience.duration.from} - {experience.duration.present ? "Present" : experience.duration.to} </i></h3>
-            <div className="space-y-2">
+            <div className="space-y-2 sm:w-[400px] transition-all duration-300">
                 <details>
                     <summary className="cursor-pointer font-bold text-white list-none flex items-center justify-between bg-blue-900/50 py-4 px-2 rounded-md" onClick={(e) => handleClick(e)}>Summary <i className="fa-solid fa-add"></i></summary>
                     <p className="text-slate-300 font-bold text-sm">{experience.summary}</p>
