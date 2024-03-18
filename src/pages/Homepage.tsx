@@ -22,6 +22,7 @@ const Homepage = () => {
     homeNav?.classList.add("flex")
     homeNavContainer?.getElementsByClassName("fa-close")[0].classList.remove("hidden")
   }
+
   return (
     <main className="w-full relative">
       <Hero />
@@ -37,7 +38,7 @@ const Homepage = () => {
           <li><a href="#projects"><i className="fa-solid fa-hammer"></i> Projects</a></li>
         </ul>
       </div>
-    </main>
+    </main >
   );
 };
 

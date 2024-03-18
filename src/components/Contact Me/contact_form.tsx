@@ -1,93 +1,57 @@
-import { LegacyRef, useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import { FieldValues, useForm } from "react-hook-form"
+import TextField from "../ui/TextField";
 
 const ContactForm = () => {
-  const contactFormRef = useRef<HTMLFormElement | null>();
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
+  const { register, handleSubmit } = useForm()
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  //function to cealr the form
-  function clearForm() {
-    setName("");
-    setEmail("");
-    setMessage("");
-  }
-  const sendEmail = () => {
-    if (contactFormRef.current) {
-      emailjs
-        .sendForm(
-          "service_wu040gu",
-          "template_4u3hlko",
-          contactFormRef.current,
-          "3wYIW4FWRr2CqzIyD"
-        )
-        .then(
-          (result) => {
-            if (result.text === "OK") {
-              clearForm();
-              setIsSubmitting(false);
-            }
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-    }
+  const sendEmail = (data: FieldValues) => {
+    console.log(data)
   };
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (name === null || email === null || message === null) {
-      return;
-    }
+  const sendMessage = (data: FieldValues) => {
     setIsSubmitting(true);
-    sendEmail();
+    sendEmail(data);
   };
 
   return (
     <form
-      onSubmit={(e) => handleSubmit(e)}
-      ref={contactFormRef as LegacyRef<HTMLFormElement>}
+      onSubmit={handleSubmit(sendMessage)}
       className="w-auto flex flex-col gap-2.5">
-      <h3 className="text-slate-400 font-bold">Contact Me</h3>
+      <h3 className="text-slate-400 font-bold">Reach Out</h3>
       <p className="text-white text-3xl font-bold">
         Let's Work Together
       </p>
-      <div className="leading-loose">
-        <label className="text-white w-full">
-          Name
-          <input
-            required
-            type="text"
-            className="text-black px-2 h-10 rounded-md outline-none focus:shadow-xl"
-            name="name"
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-          />
-        </label>
+      <div className="space-y-5">
+        <TextField
+          options={{
+            label: "Name",
+            register,
+            type: "text",
+            hintText: "John Doe",
+            prefixIcon: "fa-solid fa-user"
+          }}
+        />
 
-        <label className="text-white w-full">
-          Email Address
-          <input
-            required
-            type="email"
-            className="text-black px-2 h-10 rounded-md outline-none focus:shadow-xl"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
+        <TextField
+          options={{
+            label: "Email Address",
+            register,
+            type: "email",
+            hintText: "johndoe@gmail.com",
+            prefixIcon: "fa-solid fa-envelope"
+          }}
+        />
 
-        <label className="text-white w-full">
-          Message
-          <textarea
-            required
-            name="message"
-            onChange={(e) => setMessage(e.target.value)}
-            value={message}
-            className="text-black px-2 h-24 rounded-md outline-none focus:shadow-xl"></textarea>
-        </label>
+        <TextField
+          options={{
+            label: "Message",
+            register,
+            type: "textarea",
+            hintText: "Hello there, awesome work!",
+            prefixIcon: "fa-solid fa-message"
+          }}
+        />
 
         <button
           type="submit"
