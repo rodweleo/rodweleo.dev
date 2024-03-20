@@ -1,7 +1,7 @@
 const ServiceListItem = (service: any, key: number) => {
   return (
     <div
-      className="service duration-500 w-96 flex flex-col bg-gray-800 p-5 rounded-md gap-2.5 leading-loose mt-2.5 cursor-pointer shadow hover:shadow-xl hover:shadow-blue-950 filter drop-shadow-2xl transition-all hover:scale-[1.015]"
+      className="service duration-500 w-[320px] flex flex-col bg-gray-800 p-5 rounded-md gap-2.5 leading-loose mt-2.5 cursor-pointer shadow hover:shadow-xl hover:shadow-blue-950 filter drop-shadow-2xl transition-all hover:scale-[1.015]"
       key={key}
       id="service"
     >
