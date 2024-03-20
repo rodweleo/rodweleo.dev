@@ -4,7 +4,7 @@ export const NavBar = () => {
 
   const mainNavBar = document.getElementById("main-nav-bar")
   const handleClick = () => {
-    mainNavBar?.classList.remove("open")
+    mainNavBar?.classList.add("max-md:right-full")
   }
 
   const navLinks = document.getElementsByClassName("nav-link");
@@ -12,27 +12,29 @@ export const NavBar = () => {
     const navLink = navLinks[i];
 
     navLink.addEventListener("click", () => {
-      mainNavBar?.classList.remove("open")
+      mainNavBar?.classList.add("max-md:right-full")
     })
   }
   return (
-    <nav id="main-nav-bar">
+    <nav id="main-nav-bar" className="relative max-md:bg-slate-800 max-md:fixed max-md:top-0 max-md:h-screen max-md:w-full max-md:right-0 transition-all duration-300">
       <i
-        className="fa-solid fa-close text-white scale-150 fixed right-0 mt-8 mr-5 cursor-pointer z-50"
+        className="fa-solid fa-close text-white scale-150 right-0 mt-8 mr-5 cursor-pointer z-50 hidden max-md:absolute max-md:block"
         onClick={() => handleClick()}
       ></i>
-      <NavLink to="/" className="nav-link">
-        Home
-      </NavLink>
-      <NavLink to="experience" className="nav-link">
-        Experience
-      </NavLink>
-      <NavLink to="blog" className="nav-link">
-        Blog
-      </NavLink>
-      <NavLink to="contact-me" className="nav-link">
-        Contact
-      </NavLink>
+      <ul className="flex list-none gap-5 max-md:flex-col items-center justify-center h-full max-md:space-y-10">
+        <li><NavLink to="/" className="nav-link">
+          Home
+        </NavLink></li>
+        <li><NavLink to="experience" className="nav-link">
+          Experience
+        </NavLink></li>
+        <li> <NavLink to="blog" className="nav-link">
+          Blog
+        </NavLink></li>
+        <li><NavLink to="contact-me" className="nav-link">
+          Contact
+        </NavLink></li>
+      </ul>
     </nav>
   );
 };

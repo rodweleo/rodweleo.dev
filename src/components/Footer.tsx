@@ -1,37 +1,42 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { SocialLinks } from "./social_links";
+import SubscribeForm from "./SubscribeForm";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="bg-blue-800/20 p-5 flex flex-col justify-center gap-5 w-full bottom-0">
-      <section className="space-y-2">
-        <div className="flex items-center">
-          <img src="/images/logo.png" alt="Rodwell Leo" height="30" width="30" />
-          &nbsp;
-          <h2 className="text-white text-xl font-bold">
-            rodwe<span className="text-blue-400">leo</span>
-          </h2>
+      <section className="flex flex-wrap justify-center gap-20">
+        <section className="max-w-md">
+          <div className="flex items-center justify-center">
+            <img src="/images/logo.png" alt="Rodwell Leo" height="30" width="30" />
+            &nbsp;
+            <h2 className="text-white text-xl font-bold">
+              rodwe<span className="text-blue-400">leo</span>
+            </h2>
+          </div>
+          <p className="text-slate-400 font-bold text-justify leading-loose italic">"Crafting Code, Building Tomorrow".</p>
+        </section>
+        <div>
+          <h2 className="text-white font-bold">Quick Links</h2>
+          <ul className="text-slate-300 divide-y-2 divide-slate-700 font-bold leading-10 justify-center">
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="experience" >Experience</NavLink></li>
+            <li><NavLink to="blog" >Blog</NavLink></li>
+            <li><NavLink to="contact-me">Contact Me</NavLink></li>
+          </ul>
         </div>
-
-      </section>
-      <ul className="text-white/40 font-bold leading-10 flex space-x-4 justify-center">
-        <Link to="/">Home</Link>
-        <Link to="experience">Experience</Link>
-        <Link to="contact-me">Contact Me</Link>
-      </ul>
-      <hr />
-      <section className="flex flex-col items-center w-full space-y-6">
-        <div className="leading-loose w-fit space-y-1">
-          <p className="text-white/40 font-bold">
-            Follow me on social media:
+        <div className="leading-loose flex flex-col w-fit space-y-1">
+          <p className="text-slate-300 font-bold">
+            Follow me on social media
           </p>
           <SocialLinks />
-
         </div>
-        <p className="text-center text-slate-300 font-bold">&copy; {`Rodwell Leo ${year}`}. All Rights Reserved </p>
+        <SubscribeForm />
       </section>
+      <hr />
+      <p className="text-center text-slate-300 font-bold">&copy; {`Rodwell Leo ${year}`}. All Rights Reserved </p>
     </footer>
   );
 }

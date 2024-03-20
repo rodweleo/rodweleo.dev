@@ -8,11 +8,11 @@ const projects: Project[] = [
     category: "Web App",
     title: "Smart Muscle",
     description:
-      "This is a web application that helps in marketing and business management for a gym centre.",
+      "Smart Muscle is a SaaS platform tailored for gym owners, offering seamless management of memberships, class scheduling, attendance tracking, and payment processing. With intuitive features and real-time insights, Smaart Muscle streamlines operations, boosts member engagement, and drives revenue growth for fitness facilities of all sizes.",
     imageURL: "/images/smart-muscle.jpeg",
     link: "https://smartmuscle.vercel.app",
     images: ["/images/smart-muscle.jpeg"],
-    technologies: []
+    technologies: ["ReactJS", "TypeScript"]
   }
 ];
 
@@ -57,21 +57,25 @@ export default function Projects() {
           <div className="flex items-center relative w-full h-full">
             <button onClick={() => previousPicture()}><i className="fa-solid fa-angle-left absolute left-2 z-50 bg-slate-400/50 rounded-full p-2.5 cursor-pointer hover:bg-slate-500/50 hover:translate-x-[-4px]"></i></button>
             <div className="w-full relative">
-              <img src={project?.images[selectedImage]} alt={project?.title} className="rounded-t-md w-full h-[200px] object-fill aspect-video" />
+              <img src={project?.images[selectedImage]} alt={project?.title} className="rounded-t-md w-full h-full object-fill aspect-video" />
               <p className="absolute bottom-0 right-0 bg-slate-500 px-2 py-[0.5px] rounded-l-md"><span className="text-xl text-slate-300 font-bold">{selectedImage + 1}</span> / <span>{project?.images.length}</span> </p>
             </div>
             <button onClick={() => nextPicture()}><i className="fa-solid fa-angle-right absolute right-2 bg-slate-400/50 rounded-full p-2.5 cursor-pointer hover:bg-slate-500/50 hover:translate-x-1"></i></button>
           </div>
-          <div className="p-5 w-full flex flex-col gap-4 h-fit">
-            <h1 className="text-slate-400 text-[30px] font-bold">
+          <div className="p-2.5 w-full flex flex-col gap-4 h-fit">
+            <h1 className="text-white text-[30px] font-bold">
               {project?.title}
             </h1>
             <a href={project?.link} target="_blank" rel="noopener noreferrer" className="w-fit bg-slate-500 p-2.5 rounded-md text-white"><i className="fa-solid fa-up-right-from-square"></i> Go to Project Site</a>
-            <p className="text-slate-500 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione debitis iste, modi natus quod explicabo quisquam labore perferendis quibusdam, minus assumenda ipsa, error nemo! Commodi tenetur possimus eos quae consectetur!</p>
-            <h2 className="text-white font-bold">Technologies</h2>
-            <ul className="text-slate-500 font-bold">
-              <li>ReactJS</li>
-            </ul>
+            <p className="text-slate-500 font-bold text-justify">{project?.description}</p>
+            <div>
+              <h2 className="text-white font-bold">Technologies Utilized:</h2>
+              <ul className="text-slate-400 font-bold space-y-2 list-decimal ml-4">
+                {project?.technologies.map((technology, index: number) => (
+                  <li key={index}>{technology}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
       </ProjectModal>

@@ -8,19 +8,27 @@ export default function Hero() {
       description: "Years of experience"
     }
   ]
+
+  const titles = [
+    "software engineer",
+    "full stack developer"
+  ]
+
+
+
   return (
     <section
       id="about-leo"
       className="p-5 w-full min-h-screen flex flex-col justify-center text-center items-center">
       <div className="flex flex-col gap-5 justify-center items-center">
         <h1 className="text-white text-2xl">
-          <p className="text-white/80 bg-slate-700/50 rounded-full px-12 py-4 flex">
+          <p className="text-white/80 bg-slate-700/50 rounded-full px-8 py-4">
             Hello&#128075;, I'm
             <span className="text-blue-500 font-bold"> &nbsp;Rodwell Leo</span>
           </p>{" "}
         </h1>
         <p className="text-white/80 leading-loose text-3xl font-bold sm:w-[600px]">
-          Experienced <b className="text-blue-500">software engineer</b> with a focus on full-stack development and  mobile development.
+          Experienced <b className="text-blue-500">{titles[0]}</b> with a focus on full-stack development and  mobile development.
         </p>
         <div className="flex flex-wrap justify-center items-center space-x-2">
           {Portfolio.map((portfolio, index: number) => (

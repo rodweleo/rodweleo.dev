@@ -1,33 +1,24 @@
-import emailjs from "@emailjs/browser";
-import { useState } from "react";
-import emailAPI from "../utils/emailAPI";
+import TextField from "./ui/TextField";
+import { FieldValues, useForm } from "react-hook-form";
 
 function SubscribeForm() {
-  const [formData, setSubscriber] = useState({
-    email: "",
-  });
+  const { register } = useForm()
 
-  const subscribe = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-
-    emailjs
-      .send(emailAPI.USER_ID, "template_q8lsjbl", formData, "3wYIW4FWRr2CqzIyD")
-      .then((response: { status: number; text: string }) => {
-        console.log(response.status, response.text);
-        setSubscriber({ email: "" });
-      });
+  const subscribe = (data: FieldValues) => {
+    console.log(data)
   };
   return (
-    <form onSubmit={subscribe}>
-      <h4>Subscribe to my Newsletter</h4>
-      <input
-        type="email"
-        value={formData.email}
-        onChange={(e) => setSubscriber({ ...formData, email: e.target.value })}
-        name="subscriber"
-        placeholder="123@gmail.com"
-      />
-      <button style={{ margin: "5px" }}>Subscribe</button>
+    <form onSubmit={subscribe} className="space-y-3">
+      <h4 className="text-white font-bold text-xl">Subscribe to my Newsletter</h4>
+      <TextField options={{
+        label: "Email Address",
+        prefixIcon: "fa-solid fa-envelope",
+        hintText: "abc@gmail.com",
+        type: "email",
+        register,
+        name: "email"
+      }} />
+      <button className="px-8 py-2 rounded-md font-bold disabled:bg-slate-600 disabled:cursor-not-allowed" disabled>Subscribe</button>
     </form>
   );
 }

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { SkillContainer } from "../components/Skills/container/SkillContainer";
 
 const Skills = () => {
@@ -91,14 +92,55 @@ const Skills = () => {
     <section id="skills" className="text-center space-y-4 min-h-screen mt-20">
       <h2 className="font-bold text-slate-200 text-3xl">Skills</h2>
       <p className="font-bold text-xl text-slate-400">The technologies and tools I use:</p>
-      <div className="flex flex-wrap w-full gap-10 justify-center">
-        <SkillContainer skill_list={frontend_stack} header="Frontend" />
-        <SkillContainer skill_list={backend_stack} header="Backend" />
-        <SkillContainer skill_list={framework_stack} header="Frameworks " />
-        <SkillContainer skill_list={database_stack} header="Databases" />
-        <SkillContainer skill_list={api_stack} header="APIs" />
-        <SkillContainer skill_list={devops_stack} header="DevOps Tools" />
-      </div>
+      <section className="flex justify-center">
+        <div className="grid grid-cols-3 max-md:flex max-md:flex-wrap w-fit gap-10 justify-center">
+          <motion.div
+            initial={{ translateX: -50, opacity: 0 }}
+            whileInView={{ translateX: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ type: "spring", duration: 0.5, stiffness: 50, damping: 5 }}
+          >
+            <SkillContainer skill_list={frontend_stack} header="Frontend" />
+
+          </motion.div>
+          <motion.div
+            initial={{ translateY: -50, opacity: 0 }}
+            whileInView={{ translateY: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ type: "spring", duration: 0.5, stiffness: 50, damping: 5 }}
+          ><SkillContainer skill_list={database_stack} header="Databases" /></motion.div>
+          <motion.div
+            initial={{ translateX: 50, opacity: 0 }}
+            whileInView={{ translateX: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ type: "spring", duration: 0.5, stiffness: 50, damping: 5 }}
+          ><SkillContainer skill_list={devops_stack} header="DevOps Tools" /></motion.div>
+
+
+
+
+
+          <motion.div
+            initial={{ translateX: -50, opacity: 0 }}
+            whileInView={{ translateX: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ type: "spring", duration: 0.5, stiffness: 50, damping: 5 }}
+          ><SkillContainer skill_list={backend_stack} header="Backend" /></motion.div>
+          <motion.div
+            initial={{ translateY: 50, opacity: 0 }}
+            whileInView={{ translateY: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ type: "spring", duration: 0.5, stiffness: 50, damping: 5 }}
+          ><SkillContainer skill_list={framework_stack} header="Frameworks " /></motion.div>
+
+          <motion.div
+            initial={{ translateX: 50, opacity: 0 }}
+            whileInView={{ translateX: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ type: "spring", duration: 0.5, stiffness: 50, damping: 5 }}
+          ><SkillContainer skill_list={api_stack} header="APIs" /></motion.div>
+        </div>
+      </section>
     </section>
   )
 }

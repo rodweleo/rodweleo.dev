@@ -27,7 +27,7 @@ export const ExperiencePage = () => {
     ]
     return <section className="space-y-10 p-5 w-full">
         <h1 className="font-bold text-slate-200 text-4xl">Experience</h1>
-        <section className="flex flex-col w-full items-center">
+        <section className="flex flex-col w-full">
             {experiences.map((experience, index: number) => (
                 <ExperienceCard experience={experience} index={index} />
             ))}
