@@ -8,7 +8,7 @@ export default function Header() {
     mainNavBar?.classList.add("max-md:right-0")
   }
   return (
-    <header className="bg-blue-800/20 flex items-center justify-center space-x-60 sticky top-0 z-50 bg-opacity-80 p-5 h-20 filter backdrop-blur-sm">
+    <header className="bg-blue-800/20 flex items-center justify-center space-x-60 sticky top-0 z-50 p-5 h-20 filter backdrop-blur-md">
       <Link to="/" className="text-white flex items-center gap-1 font-bold">
         <img src="/images/logo.png" alt="Rodwell Leo" height="40" width="40" />
         <p>
@@ -18,7 +18,7 @@ export default function Header() {
 
       <i
 
-        className="fa-solid fa-bars text-white cursor-pointer hidden max-md:flex" onClick={handleClick}></i>
+        className="fa-solid fa-burger scale-150 text-white cursor-pointer hidden max-md:flex" onClick={() => handleClick()}></i>
       <NavBar />
     </header>
   );

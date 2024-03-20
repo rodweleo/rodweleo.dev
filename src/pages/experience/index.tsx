@@ -1,7 +1,7 @@
 import { ExperienceCard } from "../../components/experience/cards/ExperienceCard"
 import { Experience } from "../../utils/interfaces"
 
-export const ExperiencePage = () => {
+export const Experiences = () => {
     const experiences: Experience[] = [
         {
             title: "Software Engineer",
@@ -26,11 +26,13 @@ export const ExperiencePage = () => {
         }
     ]
     return <section className="space-y-10 p-5 w-full">
-        <h1 className="font-bold text-slate-200 text-4xl">Experience</h1>
-        <section className="flex flex-col w-full">
-            {experiences.map((experience, index: number) => (
-                <ExperienceCard experience={experience} index={index} />
-            ))}
+        <h1 className="font-bold text-slate-200 text-4xl text-center">Experience</h1>
+        <section className="w-full flex justify-center">
+            <section className="grid grid-cols-2 max-md:flex max-md:flex-col w-fit gap-10">
+                {experiences.map((experience, index: number) => (
+                    <ExperienceCard experience={experience} index={index} />
+                ))}
+            </section>
         </section>
     </section>
 }

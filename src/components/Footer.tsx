@@ -23,6 +23,7 @@ export default function Footer() {
           <ul className="text-slate-300 divide-y-2 divide-slate-700 font-bold leading-10 justify-center">
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="experience" >Experience</NavLink></li>
+            <li><NavLink to="projects" >Projects</NavLink></li>
             <li><NavLink to="blog" >Blog</NavLink></li>
             <li><NavLink to="contact-me">Contact Me</NavLink></li>
           </ul>

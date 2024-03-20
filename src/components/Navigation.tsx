@@ -25,16 +25,19 @@ export const NavBar = () => {
       ></i>
       <ul className="flex list-none gap-5 max-md:flex-col items-center justify-center h-full max-md:space-y-10">
         <li><NavLink to="/" className="nav-link">
-          Home
+          <i className="fa-solid fa-home"></i> Home
         </NavLink></li>
         <li><NavLink to="experience" className="nav-link">
-          Experience
+          <i className="fa-solid fa-briefcase"></i> Experience
+        </NavLink></li>
+        <li><NavLink to="projects" className="nav-link">
+          <i className="fa-solid fa-tools"></i> Projects
         </NavLink></li>
         <li> <NavLink to="blog" className="nav-link">
-          Blog
+          <i className="fa-solid fa-file-lines"></i> Blog
         </NavLink></li>
         <li><NavLink to="contact-me" className="nav-link">
-          Contact
+          <i className="fa-solid fa-envelope"></i> Contact
         </NavLink></li>
       </ul>
     </nav>

@@ -42,13 +42,14 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="min-h-screen flex flex-col items-center gap-5 p-2.5">
-      <h2 className="text-white text-3xl font-bold">Projects</h2>
-      <p className="font-bold text-slate-500 text-lg">Below are my latest projects:</p>
-      <section className="flex flex-wrap gap-10 justify-center">
-        {projects.map((project, index: number) => (
-          <ProjectCard project={project} index={index} onClick={setSelectedProject} />
-        ))}
+    <section id="projects" className="min-h-screen flex flex-col gap-5 p-2.5">
+      <h2 className="text-white text-4xl font-bold text-center">Projects</h2>
+      <section className="flex w-full justify-center">
+        <section className="grid grid-cols-2 gap-10">
+          {projects.map((project, index: number) => (
+            <ProjectCard project={project} index={index} onClick={setSelectedProject} />
+          ))}
+        </section>
       </section>
 
       <ProjectModal>

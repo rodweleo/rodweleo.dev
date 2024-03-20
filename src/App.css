@@ -8,6 +8,13 @@
   transition-duration: 0.2s;
 }
 
+.nav-link:hover{
+  color: white;
+    --tw-text-opacity: 1;
+    border-bottom: 5px solid rgb(96 165 250 / var(--tw-text-opacity));
+    font-weight: bolder;
+}
+
 .nav-link.active{
   color: white;
   --tw-text-opacity: 1;
