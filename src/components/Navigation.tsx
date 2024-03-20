@@ -5,6 +5,7 @@ export const NavBar = () => {
   const mainNavBar = document.getElementById("main-nav-bar")
   const handleClick = () => {
     mainNavBar?.classList.add("max-md:right-full")
+    mainNavBar?.classList.add("max-md:right-0")
   }
 
   const navLinks = document.getElementsByClassName("nav-link");
@@ -13,10 +14,11 @@ export const NavBar = () => {
 
     navLink.addEventListener("click", () => {
       mainNavBar?.classList.add("max-md:right-full")
+      mainNavBar?.classList.add("max-md:right-0")
     })
   }
   return (
-    <nav id="main-nav-bar" className="relative max-md:bg-slate-800 max-md:fixed max-md:top-0 max-md:h-screen max-md:w-full max-md:right-0 transition-all duration-300">
+    <nav id="main-nav-bar" className="relative max-md:bg-slate-800 max-md:fixed max-md:top-0 max-md:h-screen max-md:w-full max-md:right-full transition-all duration-300">
       <i
         className="fa-solid fa-close text-white scale-150 right-0 mt-8 mr-5 cursor-pointer z-50 hidden max-md:absolute max-md:block"
         onClick={() => handleClick()}

@@ -5,6 +5,7 @@ export default function Header() {
   const mainNavBar = document.getElementById("main-nav-bar")
   const handleClick = () => {
     mainNavBar?.classList.remove("max-md:right-full")
+    mainNavBar?.classList.add("max-md:right-0")
   }
   return (
     <header className="bg-blue-800/20 flex items-center justify-center space-x-60 sticky top-0 z-50 bg-opacity-80 p-5 h-20 filter backdrop-blur-sm">
