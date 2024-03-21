@@ -18,7 +18,7 @@ function App() {
   }, [location]);
 
   return (
-    <>
+    <main>
       <Header />
       <section className="min-h-screen">
         <Routes location={location} key={location.pathname}>
@@ -31,7 +31,7 @@ function App() {
         </Routes>
       </section>
       <Footer />
-    </>
+    </main>
   );
 }
 

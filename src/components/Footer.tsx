@@ -28,7 +28,7 @@ export default function Footer() {
             <li><NavLink to="contact-me">Contact Me</NavLink></li>
           </ul>
         </div>
-        <div className="leading-loose flex flex-col w-fit space-y-1">
+        <div className="w-fit space-y-4">
           <p className="text-slate-300 font-bold">
             Follow me on social media
           </p>

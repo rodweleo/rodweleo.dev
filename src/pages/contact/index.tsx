@@ -8,9 +8,9 @@ const ContactMe = () => {
             className="min-h-screen flex flex-wrap w-full justify-center items-center">
 
             <motion.div
-                initial={{ translateX: -100, opacity: 0 }}
+                initial={{ translateX: -50, opacity: 0 }}
                 whileInView={{ translateX: 0, opacity: 1 }}
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ type: "spring", duration: 0.25, stiffness: 75, damping: 5 }}
             ><img src="/images/Message.png" className="-rotate-12 w-[400px] p-0 backdrop-blur-md duration-700" /></motion.div>
 

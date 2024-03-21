@@ -41,11 +41,7 @@ const Skills = () => {
       image: "images/skills_images/icons8-mysql-500.png",
       url: "https://www.mysql.com/"
     },
-    {
-      name: "MongoDB",
-      image: "images/skills_images/icons8-mongodb-96.png",
-      url: "https://www.mongodb.com/"
-    },
+
     {
       name: "Firebase",
       image: "images/skills_images/icons8-google-firebase-console-480.png",
@@ -88,8 +84,16 @@ const Skills = () => {
     }
   ];
 
+  const cloud_stack = [
+    {
+      name: "AWS",
+      image: "images/skills_images/icons8-amazon-web-services-480.png",
+      url: "https://www.aws.com/"
+    }
+  ];
+
   return (
-    <section id="skills" className="text-center space-y-4 min-h-screen mt-20">
+    <section id="skills" className="flex flex-col items-center justify-center space-y-4 min-h-screen mt-20">
       <h2 className="font-bold text-slate-200 text-3xl">Skills</h2>
       <p className="font-bold text-xl text-slate-400">The technologies and tools I use:</p>
       <section className="flex justify-center">
@@ -97,7 +101,7 @@ const Skills = () => {
           <motion.div
             initial={{ translateX: -50, opacity: 0 }}
             whileInView={{ translateX: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ type: "spring", duration: 0.5, stiffness: 50, damping: 5 }}
           >
             <SkillContainer skill_list={frontend_stack} header="Frontend" />
@@ -106,39 +110,43 @@ const Skills = () => {
           <motion.div
             initial={{ translateY: -50, opacity: 0 }}
             whileInView={{ translateY: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ type: "spring", duration: 0.5, stiffness: 50, damping: 5 }}
           ><SkillContainer skill_list={database_stack} header="Databases" /></motion.div>
           <motion.div
             initial={{ translateX: 50, opacity: 0 }}
             whileInView={{ translateX: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ type: "spring", duration: 0.5, stiffness: 50, damping: 5 }}
           ><SkillContainer skill_list={devops_stack} header="DevOps Tools" /></motion.div>
-
-
-
 
 
           <motion.div
             initial={{ translateX: -50, opacity: 0 }}
             whileInView={{ translateX: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ type: "spring", duration: 0.5, stiffness: 50, damping: 5 }}
           ><SkillContainer skill_list={backend_stack} header="Backend" /></motion.div>
           <motion.div
             initial={{ translateY: 50, opacity: 0 }}
             whileInView={{ translateY: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ type: "spring", duration: 0.5, stiffness: 50, damping: 5 }}
           ><SkillContainer skill_list={framework_stack} header="Frameworks " /></motion.div>
 
           <motion.div
             initial={{ translateX: 50, opacity: 0 }}
             whileInView={{ translateX: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ type: "spring", duration: 0.5, stiffness: 50, damping: 5 }}
           ><SkillContainer skill_list={api_stack} header="APIs" /></motion.div>
+
+          <motion.div
+            initial={{ translateX: 50, opacity: 0 }}
+            whileInView={{ translateX: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ type: "spring", duration: 0.5, stiffness: 50, damping: 5 }}
+          ><SkillContainer skill_list={cloud_stack} header="Cloud Providers" /></motion.div>
         </div>
       </section>
     </section>

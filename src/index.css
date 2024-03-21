@@ -25,7 +25,6 @@ html {
 
 body {
   background-color: #212529;
-  min-height: 100dvh;
   margin: auto;
   position: relative;
     scroll-margin-top: 50px;
@@ -35,11 +34,6 @@ body {
 
 section {
   scroll-margin-top: 100px;
-}
-
-label {
-  display: flex;
-  flex-direction: column;
 }
 
 h1,
@@ -61,9 +55,6 @@ h2 {
   font-size: 1em;
 }
 
-h4 {
-  color: #213547;
-}
 
 h5 {
   font-size: 1em;

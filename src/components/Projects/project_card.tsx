@@ -10,7 +10,7 @@ const ProjectCard = ({ project, index, onClick }: { project: Project, index: num
   }
   return (
     <div
-      className="p-2.5 max-w-80 flex flex-col gap-2.5 bg-slate-800 rounded-xl h-fit cursor-pointer shadow hover:shadow-xl transition-all duration-300 hover:shadow-blue-900 hover:scale-[1.025]"
+      className="w-80 p-2.5 flex flex-col gap-2.5 bg-slate-800 rounded-xl h-fit cursor-pointer shadow hover:shadow-lg transition-all duration-300 hover:shadow-slate-900 hover:scale-[1.015]"
       key={index}
       onClick={() => handleClick()}
     >

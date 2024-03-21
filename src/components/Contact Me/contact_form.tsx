@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FieldValues, useForm } from "react-hook-form"
 import TextField from "../ui/TextField";
+import { Button } from "../ui/button";
 
 const ContactForm = () => {
   const { register, handleSubmit } = useForm()
@@ -17,12 +18,12 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(sendMessage)}
-      className="w-auto flex flex-col gap-2.5">
+      className="flex flex-col space-y-3">
       <h3 className="text-slate-400 font-bold">Reach Out</h3>
       <p className="text-white text-3xl font-bold">
         Let's Work Together
       </p>
-      <div className="space-y-5">
+      <div className="flex flex-col space-y-4">
         <TextField
           options={{
             label: "Name",
@@ -53,19 +54,15 @@ const ContactForm = () => {
           }}
         />
 
-        <button
-          type="submit"
-          disabled
-          className=" disabled:bg-slate-700 disabled:text-slate-500 w-fit bg-blue-500 px-5 py-2.5 rounded-md hover:bg-blue-700 text-white mt-2.5">
-          {isSubmitting ? (
-            "..."
-          ) : (
-            <>
-              Send Message <i className="fa-solid fa-paper-plane"></i>
-            </>
-          )}
-        </button>
       </div>
+      <Button
+        options={{
+          variant: "primary",
+          label: isSubmitting ? "..." : "Send Message",
+          type: "submit",
+          disabled: true,
+        }}
+      />
     </form>
   );
 };

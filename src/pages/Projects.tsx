@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ProjectModal } from "../components/Projects/modals/ProjectModal";
 import ProjectCard from "../components/Projects/project_card";
 import { Project } from "../utils/interfaces";
+import { Button } from "../components/ui/button";
 
 const projects: Project[] = [
   {
@@ -45,7 +46,7 @@ export default function Projects() {
     <section id="projects" className="min-h-screen flex flex-col gap-5 p-2.5">
       <h2 className="text-white text-4xl font-bold text-center">Projects</h2>
       <section className="flex w-full justify-center">
-        <section className="grid grid-cols-2 gap-10">
+        <section className="grid grid-cols-2 gap-10 w-fit">
           {projects.map((project, index: number) => (
             <ProjectCard project={project} index={index} onClick={setSelectedProject} />
           ))}
@@ -67,7 +68,14 @@ export default function Projects() {
             <h1 className="text-white text-[30px] font-bold">
               {project?.title}
             </h1>
-            <a href={project?.link} target="_blank" rel="noopener noreferrer" className="w-fit bg-slate-500 p-2.5 rounded-md text-white"><i className="fa-solid fa-up-right-from-square"></i> Go to Project Site</a>
+            <Button
+              options={{
+                variant: "secondary",
+                type: "submit",
+                children: <a href={project?.link} target="_blank" rel="noopener noreferrer"><i className="fa-solid fa-up-right-from-square"></i> Go to Project Site</a>
+              }}
+            />
+
             <p className="text-slate-500 font-bold text-justify">{project?.description}</p>
             <div>
               <h2 className="text-white font-bold">Technologies Utilized:</h2>

@@ -23,7 +23,7 @@ const Homepage = () => {
   }
 
   return (
-    <main className="w-full relative min-h-screen">
+    <main className="w-full relative min-h-full">
       <Hero />
       <Skills />
       <Services />

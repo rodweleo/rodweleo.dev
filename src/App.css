@@ -28,7 +28,9 @@
 
 .social-links li {
   transition: ease-in-out 0.2s;
+  transition-duration: 0.5s;
 }
 .social-links li:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-sizing: border-box;
 }
