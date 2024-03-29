@@ -41,7 +41,7 @@ export default function Hero() {
           />
           <Button
             options={{
-              variant: "primary",
+              variant: "secondary",
               children: <Link to="contact-me" > <i className="fa-regular fa-message"></i> Contact Me</Link>
             }}
           />

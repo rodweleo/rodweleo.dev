@@ -1,25 +1,34 @@
 .nav-link{
-  color: lightgray;
+  color: gray;
   font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 7.5px;
-  font-size: 18px;
   transition: all ease-in-out;
   transition-duration: 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  justify-items: center;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .nav-link:hover{
   color: white;
     --tw-text-opacity: 1;
-    border-bottom: 5px solid rgb(96 165 250 / var(--tw-text-opacity));
     font-weight: bolder;
 }
 
 .nav-link.active{
-  color: white;
   --tw-text-opacity: 1;
-  border-bottom: 5px solid rgb(96 165 250 / var(--tw-text-opacity));
+    color: rgb(96 165 250 / var(--tw-text-opacity));
+  --tw-text-opacity: 1;
   font-weight: bolder;
+  background-color: transparent;
+}
+
+.nav-link.active i{
+  --tw-text-opacity: 1;
+    color: rgb(96 165 250 / var(--tw-text-opacity));
 }
 
 .avatar {

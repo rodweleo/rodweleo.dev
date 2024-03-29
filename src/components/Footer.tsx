@@ -1,6 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { SocialLinks } from "./social_links";
-import SubscribeForm from "./SubscribeForm";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -18,7 +16,7 @@ export default function Footer() {
           </div>
           <p className="text-slate-400 font-bold text-justify leading-loose italic">"Crafting Code, Building Tomorrow".</p>
         </section>
-        <div>
+        <div className="hidden">
           <h2 className="text-white font-bold">Quick Links</h2>
           <ul className="text-slate-300 divide-y-2 divide-slate-700 font-bold leading-10 justify-center">
             <li><NavLink to="/">Home</NavLink></li>
@@ -28,13 +26,8 @@ export default function Footer() {
             <li><NavLink to="contact-me">Contact Me</NavLink></li>
           </ul>
         </div>
-        <div className="w-fit space-y-4">
-          <p className="text-slate-300 font-bold">
-            Follow me on social media
-          </p>
-          <SocialLinks />
-        </div>
-        <SubscribeForm />
+
+
       </section>
       <hr />
       <p className="text-center text-slate-300 font-bold">&copy; {`Rodwell Leo ${year}`}. All Rights Reserved </p>

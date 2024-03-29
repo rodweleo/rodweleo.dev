@@ -18,8 +18,8 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(sendMessage)}
-      className="flex flex-col space-y-3">
-      <h3 className="text-slate-400 font-bold">Reach Out</h3>
+      className="flex flex-col space-y-3 w-fit">
+      <h3 className="text-slate-400 font-bold text-2xl">Reach Out</h3>
       <p className="text-white text-3xl font-bold">
         Let's Work Together
       </p>

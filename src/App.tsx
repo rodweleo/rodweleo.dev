@@ -1,6 +1,5 @@
 import "./App.css";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Homepage from "./pages/Homepage";
 import { Routes, Route, useLocation } from "react-router-dom";
 import ContactMe from "./pages/contact";
@@ -9,6 +8,7 @@ import { useEffect } from "react";
 import { NotFound } from "./pages/error";
 import { Blog } from "./pages/blog";
 import Projects from "./pages/Projects";
+import { NavBar } from "./components/Navigation";
 
 function App() {
   const location = useLocation();
@@ -18,9 +18,10 @@ function App() {
   }, [location]);
 
   return (
-    <main>
+    <main className="min-h-full">
       <Header />
-      <section className="min-h-screen">
+      <NavBar />
+      <section className="min-h-screen p-2.5">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Homepage />} />
           <Route path="/experience" element={<Experiences />} />
@@ -30,7 +31,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </section>
-      <Footer />
+
     </main>
   );
 }

@@ -19,15 +19,13 @@
 
 html {
   scroll-behavior: smooth;
-  height: auto;
   scroll-margin-top: 50px;
 }
 
 body {
   background-color: #212529;
   margin: auto;
-  position: relative;
-    scroll-margin-top: 50px;
+  scroll-margin-top: 50px;
 }
 
 
@@ -60,3 +58,17 @@ h5 {
   font-size: 1em;
 }
 
+
+.bars:hover{
+    gap: 8px;
+}
+.bar{
+  background: white;
+  height: 2.5px;
+  width: 30px;
+  border-radius: 10px;
+}
+
+.bar.active{
+  display: none;
+}
