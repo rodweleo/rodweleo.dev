@@ -1,17 +1,12 @@
 import TextField from "./ui/TextField";
-import { FieldValues, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { Button } from "./ui/button";
 
-function SubscribeForm() {
+export const SubscribeForm = () => {
   const { register } = useForm()
 
-  const subscribe = (data: FieldValues) => {
-    console.log(data)
-  };
   return (
-    <>
-
-      <form onSubmit={subscribe} className="space-y-3">
+    <form method="post" className="space-y-3 max-w-80">
         <h4 className="text-white font-bold text-xl">Subscribe to my Newsletter</h4>
         <TextField options={{
           label: "Email Address",
@@ -29,8 +24,6 @@ function SubscribeForm() {
             disabled: true
           }}
         />
-      </form></>
+      </form>
   );
 }
-
-export default SubscribeForm;

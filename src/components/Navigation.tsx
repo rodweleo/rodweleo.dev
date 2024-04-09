@@ -1,47 +1,52 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export const NavBar = () => {
 
+  const [openNav, setOpenNav] = useState(true)
   const navLinks = document.getElementsByClassName("nav-link");
   for (let i = 0; i < navLinks.length; i++) {
     const navLink = navLinks[i];
     navLink.addEventListener("click", () => {
-      const mainNavBar = document.getElementById("main-nav-bar")!
-      mainNavBar.classList.add("max-md:hidden")
-      const bars = document.getElementsByClassName("bar")
-      for (let i = 0; i < bars.length; i++) {
-        if (i !== 1) {
-          const bar = bars[i]
-          bar.classList.toggle("opacity-0")
-        } else {
-          const bar = bars[i]
-          bar.classList.toggle("rotate-90")
-        }
-      }
+      setOpenNav(false)
     })
   }
   return (
-    <nav className="w-fit max-md:w-full max-md:justify-between bg-blue-800/20 backdrop-blur-2xl rounded-r-md flex gap-2 transition-all duration-300 sticky top-20 right-0 z-50 h-fit">
-      <NavLink to="/" className="nav-link" >
-        <i className="fa-solid fa-home"></i>
+    <nav className="flex gap-5 transition-all duration-300 sticky h-fit">
+      <button onClick={() => setOpenNav(!openNav)}><i className={`fa-solid fa-${openNav ? 'close' : "bars"} transition-all duration-300 text-white hidden cursor-pointer scale-125 max-md:flex`}></i></button>
+      <ul className={`max-md:w-full max-md:items-center max-md:overflow-y-auto flex gap-10 max-md:fixed ${openNav ? "max-md:right-0" : "max-md:right-full"} transition-all duration-300 max-md:w-full max-md:bg-slate-800  max-md:top-20 max-md:h-screen max-md:flex max-md:flex-col max-md:justify-start max-md:space-y-10`}>
+        <li>
+        <NavLink to="/" className="nav-link" >
+        <i className="fa-solid fa-home hidden"></i>
         Home
       </NavLink >
+        </li>
+      
+      <li>
       <NavLink to="experience" className="nav-link">
-        <i className="fa-solid fa-briefcase"></i>
+        <i className="fa-solid fa-briefcase hidden"></i>
         Experience
       </NavLink>
+      </li>
+      <li>
       <NavLink to="projects" className="nav-link">
-        <i className="fa-solid fa-tools"></i>
+        <i className="fa-solid fa-tools hidden"></i>
         Projects
       </NavLink>
+      </li>
+      <li>
       <NavLink to="blog" className="nav-link">
-        <i className="fa-solid fa-file-lines"></i>
+        <i className="fa-solid fa-file-lines hidden"></i>
         Blog
       </NavLink>
+      </li>
+      <li>
       <NavLink to="contact-me" className="nav-link">
-        <i className="fa-solid fa-phone"></i>
+        <i className="fa-solid fa-phone hidden"></i>
         Contact
       </NavLink>
+      </li>
+      </ul>
     </nav>
   );
 };

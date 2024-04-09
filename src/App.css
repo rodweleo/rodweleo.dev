@@ -1,19 +1,19 @@
 .nav-link{
-  color: gray;
+  color: whitesmoke;
   font-weight: bold;
   transition: all ease-in-out;
   transition-duration: 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
   justify-items: center;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  width: fit-content;
 }
 
 .nav-link:hover{
-  color: white;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
     --tw-text-opacity: 1;
     font-weight: bolder;
 }
@@ -24,6 +24,7 @@
   --tw-text-opacity: 1;
   font-weight: bolder;
   background-color: transparent;
+  border-bottom: 1px solid rgb(96 165 250 / var(--tw-text-opacity));
 }
 
 .nav-link.active i{

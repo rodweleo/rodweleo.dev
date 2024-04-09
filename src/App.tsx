@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { NotFound } from "./pages/error";
 import { Blog } from "./pages/blog";
 import Projects from "./pages/Projects";
-import { NavBar } from "./components/Navigation";
+import Footer from "./components/Footer";
 
 function App() {
   const location = useLocation();
@@ -20,7 +20,7 @@ function App() {
   return (
     <main className="min-h-full">
       <Header />
-      <NavBar />
+      
       <section className="min-h-screen p-2.5">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Homepage />} />
@@ -31,7 +31,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </section>
-
+      <Footer/>
     </main>
   );
 }

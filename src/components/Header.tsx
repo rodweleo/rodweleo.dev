@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { NavBar } from "./Navigation";
 
 export default function Header() {
 
@@ -10,6 +11,7 @@ export default function Header() {
           rodwe<span className="text-blue-400">leo</span>
         </p>
       </Link>
+      <NavBar />
     </header>
   );
 }
