@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export const NavBar = () => {
 
-  const [openNav, setOpenNav] = useState(true)
+  const [openNav, setOpenNav] = useState(false)
   const navLinks = document.getElementsByClassName("nav-link");
   for (let i = 0; i < navLinks.length; i++) {
     const navLink = navLinks[i];
@@ -14,7 +14,7 @@ export const NavBar = () => {
   return (
     <nav className="flex gap-5 transition-all duration-300 sticky h-fit">
       <button onClick={() => setOpenNav(!openNav)}><i className={`fa-solid fa-${openNav ? 'close' : "bars"} transition-all duration-300 text-white hidden cursor-pointer scale-125 max-md:flex`}></i></button>
-      <ul className={`max-md:w-full max-md:items-center max-md:overflow-y-auto flex gap-10 max-md:fixed ${openNav ? "max-md:right-0" : "max-md:right-full"} transition-all duration-300 max-md:w-full max-md:bg-slate-800  max-md:top-20 max-md:h-screen max-md:flex max-md:flex-col max-md:justify-start max-md:space-y-10`}>
+      <ul className={`max-md:w-full max-md:items-center max-md:overflow-y-auto flex gap-10 max-md:fixed ${openNav ? "max-md:right-0" : "max-md:right-full"} transition-all duration-300 max-md:w-full max-md:bg-slate-800  max-md:top-20 max-md:h-screen max-md:flex max-md:flex-col max-md:justify-center max-md:space-y-10`}>
         <li>
         <NavLink to="/" className="nav-link" >
         <i className="fa-solid fa-home hidden"></i>
