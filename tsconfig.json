@@ -1,6 +1,13 @@
 {
   "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
     "target": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "skipLibCheck": true,

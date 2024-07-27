@@ -20,7 +20,6 @@ function App() {
   return (
     <main className="min-h-full">
       <Header />
-      
       <section className="min-h-screen p-2.5">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Homepage />} />
