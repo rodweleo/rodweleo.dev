@@ -5,14 +5,20 @@ import { SkillsList } from "@/components/ui/SkillsList";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { useWorkExperiences } from "@/hooks/useWorkExperiences";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import moment from "moment"
+import { Calendar, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
-
+  const { workExperiences } = useWorkExperiences()
   return (
-    <main className="w-full relative min-h-full">
-      <section id="#" className="flex justify-center items-center gap-10 min-h-screen">
+    <main className="w-full relative min-h-screen">
+      <section id="#" className="mt-10 flex flex-wrap justify-center items-center gap-10 min-h-screen">
         <div className="max-w-[650px] space-y-5">
-          <h1 className="font-bold text-7xl">Crafting Exceptional Digital Experiences</h1>
+          <p className="px-5 py-2 rounded-full bg-slate-100 w-fit font-semibold text-xl">Hello, I'm Rodwell Leo</p>
+          <h1 className="font-bold text-7xl">Crafting Exceptional Digital Experiences.</h1>
           <p className="text-slate-500">I'm a passionate full-stack software engineer, dedicated to creating beautiful and functional digital products. As a full stack software engineer, my focus is on creating Software as a Service (SaaS) solutions that redefine industry standards. <br/> I am driven by a passion for software craftsmanship and product innovation, leveraging technology to solve problems and create value for businesses and individuals alike.</p>
           <Button type="button">View Portfolio</Button>
         </div>
@@ -33,7 +39,7 @@ const Homepage = () => {
         </div>
         
       </section>
-      <section className="flex flex-col w-full justify-center items-center space-y-5">
+      <section className="flex flex-col w-full justify-center items-center space-y-5 min-h-screen">
         <div className="text-center space-y-2.5">
           <h1 className="font-bold text-5xl">Technical Skills</h1>
           <p className="text-slate-500">Rodwell has a diverse set of technical skills, allowing him to tackle a wide range of projects and challenges.</p>
@@ -47,14 +53,69 @@ const Homepage = () => {
           <h1 className="w-full font-bold text-5xl">Work Experience</h1>
           <p className="leading-8 text-justify text-lg max-w-[500px] text-slate-500"></p>        
         </div>
+        <div className="flex justify-center gap-10 flex-wrap">
+          {
+            workExperiences.map((experience, index: number) => (
+              <Card key={index} className="max-w-[400px]">
+                <CardHeader>
+                  <CardTitle>{experience.title}</CardTitle>
+                  <CardDescription>{experience.company}, {moment(experience.started_at).format("MM/YYYY")} - {moment(experience.ended_at).format("MM/YYYY")}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <h2 className="font-semibold">Achievements</h2>
+                  <ul className="list-disc ml-5">
+                    {
+                      experience.achievements.map((achievement) => {
+                        return <li>{achievement}</li>
+                      })
+                    }
+                  </ul>
+                </CardContent>
+              </Card>
+            ))
+          }
+        </div>
       </section>
-      <section className="flex w-full justify-center min-h-screen">
+      <section id="projects" className="flex flex-col w-full justify-center items-center min-h-screen space-y-5">
         <div className="text-center space-y-2.5">
           <h1 className="font-bold text-5xl">Notable Projects</h1>
           <p className="text-slate-500">Rodwell has worked on a variety of projects, showcasing his versatility and problem-solving skills.</p>
         </div>
+        <div className="w-fit">
+          <div className="max-w-[300px] space-y-2 rounded-xl">
+            <img src="https://th.bing.com/th/id/OIP.ytIzQCGOFD-54gPCd9yl3QHaHa?rs=1&pid=ImgDetMain" className="w-full rounded-xl"/> 
+            <h1 className="font-bold text-2xl">Project 1</h1>
+            <p className="text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iusto dolore a dolorem voluptatum est distinctio sint ea nam fugit sit quis labore aspernatur, ipsam, molestias quos minima deserunt nesciunt?</p>
+            <ul className="flex justify-between">
+              <li><Button variant="secondary">Github</Button></li>
+              <li><Button>View Project</Button></li>
+            </ul>
+          </div>
+        </div>
       </section>
-      <section className="flex flex-col w-full min-h-screen justify-center items-center space-y-5">
+      <section id="latest-blog-posts" className="flex flex-col w-full min-h-screen justify-center items-center space-y-5">
+        <div className="flex flex-col items-center text-center space-y-2">
+          <h1 className="font-bold text-5xl">Latest Blog Posts</h1>
+          <p className="text-slate-500">Dive into my latest thoughts and insights on software engineering, technology, and more.</p>
+        </div>
+        <div>
+          <div className="p-5 border rounded-xl max-w-[350px] space-y-2.5">
+            <img src="https://th.bing.com/th/id/OIP.Fj23heG7XB9tzerdt_t9oAHaE8?w=268&h=180&c=7&r=0&o=5&pid=1.7" alt="" className="rounded-xl w-full" />
+            <div className="space-y-1">
+              <h1 className="font-bold text-2xl"><a href="blog">Trends in FinTech - Kenya</a></h1>
+              <p className="text-slate-500 text-ellipsis line-clamp-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non esse natus sit nihil cum provident quaerat hic ducimus exercitationem? Facere accusantium qui, magnam necessitatibus inventore voluptatum minima? Sint, minus!</p>
+              <ul className="flex justify-between">
+                <li className="flex items-center gap-1 text-slate-500"><User size={16} absoluteStrokeWidth /> <span>Admin</span></li>
+                <li className="flex items-center gap-1 text-slate-500"><Calendar size={16} absoluteStrokeWidth /> {moment().format("LL")}</li>
+              </ul>
+            </div>
+            <Button variant="link" className="p-0">Read more </Button>
+          </div>
+        </div>
+        
+        
+      </section>
+      <section id="contact-me" className="flex flex-col w-full min-h-screen justify-center items-center space-y-5 bg-slate-200">
         <div className="flex flex-col items-center space-y-2">
           <p className="bg-slate-100 text-slate-800 font-semibold w-fit px-6 py-2 rounded-full">Have a project in mind or just want to say hello? </p>
           <h1 className="font-bold text-5xl">Get in Touch</h1>

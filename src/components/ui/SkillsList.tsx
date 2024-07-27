@@ -6,7 +6,7 @@ export const SkillsList = () => {
   return (
     <section
       id="skills"
-      className="flex flex-wrap gap-10"
+      className="flex flex-wrap gap-10 justify-center"
     >
       <Card>
         <CardHeader>

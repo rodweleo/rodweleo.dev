@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const NavBar = () => {
 
@@ -16,16 +16,16 @@ export const NavBar = () => {
       <button onClick={() => setOpenNav(!openNav)}><i className={`fa-solid fa-${openNav ? 'close' : "bars"} transition-all duration-300 text-white hidden cursor-pointer scale-125 max-md:flex`}></i></button>
       <ul className="flex items-center gap-5">
         <li>
-          <NavLink to="experience" className="nav-link">
+          <a href="/#work-experience" className="nav-link">
             <i className="fa-solid fa-briefcase hidden"></i>
             Experience
-          </NavLink>
+          </a>
         </li>
         <li>
-          <NavLink to="projects" className="nav-link">
+          <a href="/#projects" className="nav-link">
             <i className="fa-solid fa-tools hidden"></i>
             Projects
-          </NavLink>
+          </a>
         </li>
         <li>
           <NavLink to="blog" className="nav-link">
@@ -34,10 +34,10 @@ export const NavBar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="contact-me" className="nav-link">
+          <a href="/#contact-me" className="nav-link">
             <i className="fa-solid fa-phone hidden"></i>
             Contact
-          </NavLink>
+          </a>
         </li>
       </ul>
     </nav>

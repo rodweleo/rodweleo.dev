@@ -66,10 +66,15 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        scrollProgress: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        scrollProgress: 'scrollProgress 1s ease-in-out forwards',
       },
     },
   },
