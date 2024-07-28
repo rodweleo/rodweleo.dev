@@ -1,18 +1,11 @@
 import { Link } from "react-router-dom";
-import { Project } from "../../utils/interfaces";
-import { Dispatch } from "react";
+import { ProjectProps } from "@/utils/types";
 
-const ProjectCard = ({ project, index, onClick }: { project: Project, index: number, onClick: Dispatch<React.SetStateAction<Project | null>> }) => {
-  const handleClick = () => {
-    const projectModal = document.getElementById("project-modal") as HTMLDialogElement;
-    projectModal.classList.remove("hidden")
-    onClick(project)
-  }
+const ProjectCard = ({ project, index }: { project: ProjectProps, index: number }) => {
   return (
     <div
       className="w-80 p-2.5 flex flex-col gap-2.5 bg-slate-800 rounded-xl h-fit cursor-pointer shadow hover:shadow-lg transition-all duration-300 hover:shadow-slate-900 hover:scale-[1.015]"
       key={index}
-      onClick={() => handleClick()}
     >
       <img
         src={project.imageURL}

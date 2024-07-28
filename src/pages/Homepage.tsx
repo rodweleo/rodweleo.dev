@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { services } from "@/utils/data/services";
 import ServiceListItem from "@/components/Services/service_list_item";
-import { SkillsList } from "@/components/ui/SkillsList";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -10,9 +9,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import moment from "moment"
 import { Calendar, User } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useBlogPosts } from "@/hooks/useBlogPosts";
+import { Badge } from "@/components/ui/badge";
+import { SkillsList } from "@/components/ui/SkillsList";
 
 const Homepage = () => {
   const { workExperiences } = useWorkExperiences()
+  const { blogPosts } = useBlogPosts()
+
   return (
     <main className="w-full relative min-h-screen">
       <section id="#" className="mt-10 flex flex-wrap justify-center items-center gap-10 min-h-screen">
@@ -34,7 +38,7 @@ const Homepage = () => {
         </div>
         <div className="flex flex-wrap justify-center gap-2.5">
             {services.map((service, index: number) => (
-              <ServiceListItem service={service} key={index} />
+              <ServiceListItem service={service} index={index} />
             ))}
         </div>
         
@@ -99,18 +103,27 @@ const Homepage = () => {
           <p className="text-slate-500">Dive into my latest thoughts and insights on software engineering, technology, and more.</p>
         </div>
         <div>
-          <div className="p-5 border rounded-xl max-w-[350px] space-y-2.5">
-            <img src="https://th.bing.com/th/id/OIP.Fj23heG7XB9tzerdt_t9oAHaE8?w=268&h=180&c=7&r=0&o=5&pid=1.7" alt="" className="rounded-xl w-full" />
-            <div className="space-y-1">
-              <h1 className="font-bold text-2xl"><a href="blog">Trends in FinTech - Kenya</a></h1>
-              <p className="text-slate-500 text-ellipsis line-clamp-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non esse natus sit nihil cum provident quaerat hic ducimus exercitationem? Facere accusantium qui, magnam necessitatibus inventore voluptatum minima? Sint, minus!</p>
-              <ul className="flex justify-between">
-                <li className="flex items-center gap-1 text-slate-500"><User size={16} absoluteStrokeWidth /> <span>Admin</span></li>
-                <li className="flex items-center gap-1 text-slate-500"><Calendar size={16} absoluteStrokeWidth /> {moment().format("LL")}</li>
-              </ul>
-            </div>
-            <Button variant="link" className="p-0">Read more </Button>
-          </div>
+          {
+            blogPosts.map((post) => (
+              <div className="p-5 border rounded-xl max-w-[350px] space-y-2.5">
+                <img src={post.thumbnail} alt={post.title} className="rounded-xl w-full" loading="lazy"/>
+                <div className="space-y-1">
+                  <ul className="tags-container">
+                    {post.tags.map((tag) => (
+                      <li><Badge className="bg-blue-700">{tag}</Badge></li>
+                    ))}
+                  </ul>
+                  <h1 className="font-bold text-2xl"><Link to={`blog/${post.slug}`} state={{ blogPost: post}}>{post.title}</Link></h1>
+                  <p className="text-slate-500 text-ellipsis line-clamp-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non esse natus sit nihil cum provident quaerat hic ducimus exercitationem? Facere accusantium qui, magnam necessitatibus inventore voluptatum minima? Sint, minus!</p>
+                  <ul className="flex justify-between">
+                    <li className="flex items-center gap-1 text-slate-500"><User size={16} absoluteStrokeWidth /> <span>Admin</span></li>
+                    <li className="flex items-center gap-1 text-slate-500"><Calendar size={16} absoluteStrokeWidth /> {moment().format("LL")}</li>
+                  </ul>
+                </div>
+                <Button variant="link" className="p-0">Read more </Button>
+              </div>
+            ))
+          }
         </div>
         
         

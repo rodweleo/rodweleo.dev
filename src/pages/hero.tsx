@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { SocialLinks } from "../components/social_links";
 import { Button } from "@/components/ui/button";
 

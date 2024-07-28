@@ -21,7 +21,10 @@ function App() {
       <section className="min-h-screen">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Homepage />} />
-          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog">
+            <Route index element={<Blog />} />
+            <Route path=":id" element={<BlogPage />} />
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </section>

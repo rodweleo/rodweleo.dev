@@ -1,8 +1,12 @@
+import { ServiceProps } from "@/utils/types";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
-const ServiceListItem = ({service, key}) => {
+const ServiceListItem = ({service, index}: {
+  service: ServiceProps
+  index: number
+}) => {
   return (
-    <Card className="max-w-[400px]">
+    <Card className="max-w-[400px]" key={index}>
       <CardHeader>
         <CardTitle>
           {service.title}

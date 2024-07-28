@@ -63,6 +63,12 @@ code{
   font-size: 0.9em;
 }
 
+.tags-container{
+  display: flex;
+  gap: 10px;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
