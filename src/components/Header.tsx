@@ -13,22 +13,19 @@ export default function Header() {
   })
 
   return (
-    <>
-      <header className="flex w-full items-center bg-white justify-between p-5 h-20 sticky top-0 z-50">
-        <Link to="/" className="flex items-center gap-1 font-bold ">
-          <img src="/images/logo.png" alt="Rodwell Leo" height="40" width="40" />
-          <p>
-            rodwe<span className="text-blue-400">leo</span>
-          </p>
-        </Link>
-        {
-          windowDimensions.width < 576 ? <MobileNav/> : <NavBar />
-        }
+      <header className="w-full space-y-2.5 bg-white/20 backdrop-blur-xl sticky top-0 z-50">
+        <div className="flex items-start gap-40 justify-center w-full p-5 h-20">
+          <Link to="/">
+            <p className="font-semibold">
+              rodwe<span className="text-blue-400">leo</span>
+            </p>
+          </Link>
+          {
+            windowDimensions.width < 576 ? <MobileNav/> : <NavBar />
+          }
+        </div>
+        <Progress value={currentPosition} className="h-1"/>
       </header>
-      <Progress value={currentPosition} className="fixed z-50 h-1"/>
-      <div />
-    </>
-
   );
 }
 

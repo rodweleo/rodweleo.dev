@@ -2,8 +2,20 @@ import { NavLink } from "react-router-dom";
 
 export const NavBar = () => {
   return (
-    <nav className="flex gap-5 transition-all duration-300 sticky h-fit">
-      <ul className="flex items-center gap-5">
+    <nav>
+      <ul className="flex items-center gap-10">
+        <li>
+          <a href="/#" className="nav-link">
+            <i className="fa-solid fa-briefcase hidden"></i>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="/#technical-skills" className="nav-link">
+            <i className="fa-solid fa-briefcase hidden"></i>
+            Technical Skills
+          </a>
+        </li>
         <li>
           <a href="/#work-experience" className="nav-link">
             <i className="fa-solid fa-briefcase hidden"></i>

@@ -13,7 +13,7 @@ export const SkillsList = () => {
                 <ul className="space-y-3 text-xl">
                     {
                         frontend_stack.map((stack) =>(
-                            <li>{stack.name}</li>
+                            <li>&#128204;{stack.name}</li>
                         ))
                     }
                 </ul>
@@ -30,7 +30,7 @@ export const SkillsList = () => {
                 <ul className="space-y-3 text-xl">
                     {
                         backend_stack.map((stack) =>(
-                            <li>{stack.name}</li>
+                            <li>&#128204;{stack.name}</li>
                         ))
                     }
                 </ul>
@@ -47,7 +47,7 @@ export const SkillsList = () => {
                 <ul className="space-y-3 text-xl">
                     {
                         database_stack.map((stack) =>(
-                            <li>{stack.name}</li>
+                            <li>&#128204;{stack.name}</li>
                         ))
                     }
                 </ul>
@@ -64,7 +64,7 @@ export const SkillsList = () => {
                 <ul className="space-y-3 text-xl">
                     {
                         devops_stack.map((stack) =>(
-                            <li>{stack.name}</li>
+                            <li>&#128204;{stack.name}</li>
                         ))
                     }
                 </ul>
@@ -81,7 +81,7 @@ export const SkillsList = () => {
                 <ul className="space-y-3 text-xl">
                     {
                         cloud_stack.map((stack) =>(
-                            <li> {stack.name}</li>
+                            <li>&#128204;{stack.name}</li>
                         ))
                     }
                 </ul>

@@ -4,13 +4,11 @@ export type SkillProps =  {
 }
 
 export type ProjectProps = {
-  category: string;
-  title: string;
+  name: string;
   description: string;
-  imageURL: string;
-  link: string;
-  images: string[];
-  technologies: string[];
+  thumbnail_url: string;
+  live_link: string;
+  tech_stack: string[];
 }
 
 export type WorkExperienceProps = {
@@ -29,9 +27,11 @@ export type BlogPostProps = {
   thumbnail: string;
   tags: string[];
   created_at: string;
+  created_by: string;
 }
 
 export type ServiceProps = {
+  icon: string;
   title: string;
   description: string;
 }

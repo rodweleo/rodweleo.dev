@@ -8,7 +8,8 @@ const ServiceListItem = ({service, index}: {
   return (
     <Card className="max-w-[400px]" key={index}>
       <CardHeader>
-        <CardTitle>
+        <CardTitle className="flex flex-col gap-5">
+          <i className={`${service.icon} text-blue-700 size-4`}></i>
           {service.title}
         </CardTitle>
       </CardHeader>
