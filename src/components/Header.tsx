@@ -21,7 +21,7 @@ export default function Header() {
             </p>
           </Link>
           {
-            windowDimensions.width < 576 ? <MobileNav/> : <NavBar />
+            windowDimensions.width < 900 ? <MobileNav/> : <NavBar />
           }
         </div>
         <Progress value={currentPosition} className="h-1"/>
