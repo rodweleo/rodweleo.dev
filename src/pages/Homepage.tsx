@@ -24,7 +24,7 @@ const Homepage = () => {
           </ul>
           <ul className="flex flex-wrap gap-5">
             <li><Button type="button" variant="secondary"><a href="#contact-me">Contact Me</a></Button></li>
-            <li><Button type="button"  onClick={() => window.open("https://drive.google.com/file/d/10jL5mK2qDMl_qxDBBSBJ2un3ZTrXaY9t/view?usp=drive_link", "_blank")}>View Resume</Button></li>
+            <li><Button type="button"  onClick={() => window.open("https://drive.google.com/file/d/1Cvs5ZY6oT44_3AdLt5Dy77cWGwjCC4Qa/view?usp=drive_link", "_blank")}>View Resume</Button></li>
           </ul>
         </div>
         <img src="/images/an-african-american-young-software-engineer-b_OdLAJEa.jpg" width="450px" loading="lazy" className="rounded-xl" alt="Rodwell Leo's Image"/>
