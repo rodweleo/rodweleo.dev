@@ -13,7 +13,7 @@ const services = [
     {
       icon: "fa-solid fa-cloud",
       title: "Cloud Services",
-      description: "I provide comprehensive solutions tailored to your business needs, from selecting the right cloud provider to the implemention of scalable and cost-effective architectures while ensuring a smooth and efficient transition to the cloud."
+      description: "I provide comprehensive solutions tailored to your business needs, from selecting the right cloud provider to the implementation of scalable and cost-effective architectures."
     },
     {
       icon: "fa-solid fa-mobile-screen-button",

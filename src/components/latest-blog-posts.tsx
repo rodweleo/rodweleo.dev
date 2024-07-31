@@ -16,8 +16,8 @@ export const LatestBlogPosts = () => {
         </div>
         <div>
           {
-            blogPosts.map((post) => (
-              <div className="p-5 border rounded-xl max-w-[350px] space-y-2.5">
+            blogPosts.map((post, index: number) => (
+              <div className="p-5 border rounded-xl max-w-[350px] space-y-2.5" key={index}>
                 <img src={post.thumbnail} alt={post.title} className="rounded-xl w-full" loading="lazy"/>
                 <div className="space-y-1">
                   <ul className="tags-container">
