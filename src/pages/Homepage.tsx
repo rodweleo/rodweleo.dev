@@ -5,7 +5,6 @@ import { SkillsList } from "@/components/ui/SkillsList";
 import { WorkExperience } from "@/components/work-experience";
 import { NotableProjects } from "@/components/notable-projects";
 import { LatestBlogPosts } from "@/components/latest-blog-posts";
-import { ContactMe } from "@/components/contact-me";
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Mail } from "lucide-react";
 
@@ -56,7 +55,7 @@ const Homepage = () => {
       <div className="p-5">
         <LatestBlogPosts/>
       </div>
-      <ContactMe/>
+      
     </main >
   );
 };

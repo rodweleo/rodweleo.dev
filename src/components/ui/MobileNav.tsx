@@ -9,8 +9,10 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "./button";
 import { Menu } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const MobileNav = () => {
+  const navigate = useNavigate()
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -25,11 +27,11 @@ export const MobileNav = () => {
             Crafting Exceptional Digital Experiences
           </SheetDescription>
         </SheetHeader>
-        <nav className="mt-5">
+        <nav className="mt-5 space-y-5">
           <ul className="space-y-5">
             <li>
               <SheetClose asChild>
-                <a href="/#">Home</a>
+                <a href="/">Home</a>
               </SheetClose>
             </li>
             <li>
@@ -52,9 +54,16 @@ export const MobileNav = () => {
                 <a href="/blog">Blog</a>
               </SheetClose>
             </li>
+          </ul>
+          <ul className="space-y-2.5">
             <li>
               <SheetClose asChild>
-                <a href="/#contact-me">Contact Me</a>
+                <Button variant="outline" className="w-full" onClick={() => navigate("contact-me")}>Contact Me</Button>
+              </SheetClose>
+            </li>
+            <li>
+              <SheetClose asChild>
+                <Button className="w-full" onClick={() => navigate("request-a-quote")}>Request a Quote</Button>
               </SheetClose>
             </li>
           </ul>

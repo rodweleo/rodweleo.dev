@@ -7,6 +7,8 @@ import { NotFound } from "./pages/error";
 import { Blog } from "./pages/blog";
 import Footer from "./components/Footer";
 import { BlogPage } from "./pages/blog/BlogPage";
+import { ContactMe } from "./components/contact-me";
+import { RequestAQuotePage } from "./pages/request-a-quote";
 
 function App() {
   const location = useLocation();
@@ -25,6 +27,8 @@ function App() {
             <Route index element={<Blog />} />
             <Route path=":id" element={<BlogPage />} />
           </Route>
+          <Route path="/contact-me" element={<ContactMe/>}/>
+          <Route path="/request-a-quote" element={<RequestAQuotePage/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </section>

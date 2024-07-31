@@ -17,7 +17,7 @@ const ServiceListItem = ({service, index}: {
     {service.description}
   </CardContent>
   <CardFooter>
-    <Button><a href="#contact-me">Book Service</a></Button>
+    <Button><a href="/request-a-quote">Book Service</a></Button>
   </CardFooter>
 </Card>
 };

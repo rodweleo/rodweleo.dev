@@ -34,21 +34,21 @@ export const ContactMe = () => {
     }
 
   return (
-    <section
+    <main
       id="contact-me"
-      className="flex flex-col w-full min-h-screen justify-center items-center space-y-5 bg-slate-200"
+      className="flex flex-col w-full min-h-screen justify-center items-center space-y-5 mt-10 p-5"
     >
-      <div className="flex flex-col items-center text-center space-y-2">
-        <p className="bg-slate-100 text-slate-800 font-semibold w-fit px-6 py-2 rounded-full">
+      <section className="space-y-2.5">
+      <div className="flex flex-col space-y-2">
+        <p className="bg-slate-100/50 text-slate-800 font-semibold w-fit px-6 py-2 rounded-full">
           Have a project in mind or just want to say hello?{" "}
         </p>
         <h1 className="font-bold text-5xl">Get in Touch</h1>
         <p className="text-slate-500">
-          Fill out the form below and I'll will get back to you as soon as
-          possible.
+          I'm here to help. Have a chat 24/7 and get set up and ready to go in just 5 minutes.
         </p>
       </div>
-      <form ref={formRef} className="space-y-4 w-[350px]" onSubmit={handleSubmit(sendMessage)}>
+      <form ref={formRef} className="space-y-4 w-full" onSubmit={handleSubmit(sendMessage)}>
         <Label className="flex flex-col gap-2">
           Name
           <Input type="text" placeholder="Name" {...register("name", {
@@ -77,6 +77,7 @@ export const ContactMe = () => {
           <span>Submit</span>
         </Button>
       </form>
-    </section>
+      </section>
+    </main>
   );
 };
