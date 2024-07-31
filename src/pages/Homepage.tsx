@@ -7,14 +7,33 @@ import { NotableProjects } from "@/components/notable-projects";
 import { LatestBlogPosts } from "@/components/latest-blog-posts";
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Mail } from "lucide-react";
+import Typed from 'typed.js';
+import { useEffect, useRef } from "react";
+
 
 const Homepage = () => {
+  const typedRef = useRef(null)
+
+  useEffect(() => {
+    const typed = new Typed(typedRef.current, {
+      strings: ["Remarkable", "Outstanding", "Exceptional"],
+      typeSpeed: 100,
+      backSpeed:100,
+      smartBackspace: true,
+      showCursor: true
+    });
+
+    return () => {
+      typed.destroy()
+    }
+  }, [])
   return (
     <main className="w-full relative min-h-screen">
+      
       <section id="#" className="mt-10 flex flex-wrap justify-center items-center gap-10 min-h-screen p-5">
         <div className="max-w-[650px] space-y-5">
           <p className="px-5 py-2 rounded-full bg-slate-100 w-fit font-semibold text-lg">Hello &#128075;, I'm Rodwell Leo</p>
-          <h1 className="font-bold text-6xl max-md:text-5xl">Crafting Exceptional Digital Experiences.</h1>
+          <h1 className="font-bold text-6xl max-md:text-5xl leading-tight"> Crafting <span className="text-blue-500" ref={typedRef}></span> Digital Experiences.</h1>
           <p className="text-slate-500">I'm a passionate full-stack software engineer, dedicated to creating beautiful and functional digital products. <br/> As a full stack software engineer, my focus is on creating Software as a Service (SaaS) solutions that redefine industry standards. <br/> I am driven by a passion for software craftsmanship and product innovation, leveraging technology to solve problems and create value for businesses and individuals alike.</p>
           <ul className="flex items-center gap-5">
             <li><Link to="https://github.com/rodweleo" target="_blank" title="Github"><Github /></Link></li>
