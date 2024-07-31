@@ -48,20 +48,29 @@ export const RequestAQuoteForm = () => {
   const form = useForm<z.infer<typeof RequestAQuoteSchema>>({
     resolver: zodResolver(RequestAQuoteSchema),
     defaultValues: {
-      services: ["Full-Stack Web Development", ""],
+      firstName: "",
+      lastName: "",
+      phone: "",
+      email: "",
+      services: ["Full-Stack Web Development"],
+      description: "",
+      message: "",
     },
   });
 
   const attachmentsRef = form.register("attachments")
 
 
-  function onSubmit(data: z.infer<typeof RequestAQuoteSchema>) {
-    toast({
+
+  async function onSubmit(data: z.infer<typeof RequestAQuoteSchema>) {
+    
+      toast({
       title: "Quotation sent.",
       description: (
         <p>Hello <b>{data.firstName} {data.lastName}</b>, your quotation has been sent. Rodwell Leo will get back to you to discuss more. <br/>Thank you for taking your time.</p>
       ),
     });
+    
   }
   return (
     <section className="space-y-2.5 max-w-[500px]">
@@ -216,6 +225,25 @@ export const RequestAQuoteForm = () => {
           />
           <FormField
             control={form.control}
+            name="description"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>
+                  Description
+                </FormLabel>
+                <FormControl>
+                  <Textarea
+                    {...field}
+                    placeholder="Provide more information about the project."
+                  />
+                </FormControl>
+                
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
             name="message"
             render={({ field }) => (
               <FormItem>
@@ -225,7 +253,7 @@ export const RequestAQuoteForm = () => {
                 <FormControl>
                   <Textarea
                     {...field}
-                    placeholder="Provide more information about the project..."
+                    placeholder="Leave me a message."
                   />
                 </FormControl>
                 <FormMessage />

@@ -35,3 +35,14 @@ export type ServiceProps = {
   title: string;
   description: string;
 }
+
+export type QuotationProps = {
+  firstName: string;
+  lastName: string;
+  phone?: string;
+  email: string;
+  services: string[];
+  attachments?: FileList
+  description: string
+  message?: string
+}

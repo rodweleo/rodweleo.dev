@@ -8,6 +8,7 @@ export const RequestAQuoteSchema = z.object({
     services: z.array(z.string()).refine((value) => value.some((item) => item), {
         message: "Select at least one service.",
     }).optional(),
-    message: z.string(),
+    description: z.string(),
+    message: z.string().optional(),
     attachments: z.instanceof(FileList).optional()
 })
