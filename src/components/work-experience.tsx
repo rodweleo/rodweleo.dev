@@ -15,7 +15,7 @@ export const WorkExperience = () => {
         <div className="flex justify-center gap-10 flex-wrap">
           {
             workExperiences.map((experience, index: number) => (
-              <Card key={index} className="max-w-[500px]">
+              <Card key={index} className="max-w-[500px] shadow-xl hover:shadow-2xl hover:scale-[1.0125] transition-all duration-300">
                 <CardHeader>
                   <CardTitle>{experience.title}</CardTitle>
                   <CardDescription>{experience.company}, {moment(experience.started_at).format("MM/YYYY")} - {moment(experience.ended_at).format("MM/YYYY")}</CardDescription>

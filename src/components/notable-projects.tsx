@@ -14,8 +14,8 @@ export const NotableProjects = () => {
         <div className="w-fit flex flex-wrap justify-center gap-10">
           {
             projects.map((project, index: number) => (
-              <div className="max-w-[400px] h-auto space-y-2 rounded-xl border flex flex-col justify-between" key={index}>
-                <img src={project.thumbnail_url} className="w-full rounded-[20px] p-2.5" loading="lazy"/>
+              <div className="max-w-[400px] h-auto space-y-2 rounded-xl border flex flex-col justify-between shadow-xl hover:shadow-2xl hover:scale-[1.0125] transition-all duration-300 bg-white/90 " key={index}>
+                <img src={project.thumbnail_url} className="w-full rounded-[20px] p-2.5" loading="lazy" alt={project.name}/>
                 <div className="p-2.5 flex flex-col h-full">
                   <h1 className="font-bold text-2xl">{project.name}</h1>
                   <p className="text-slate-500 text-ellipsis line-clamp-3">{project.description}</p>

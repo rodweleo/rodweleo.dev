@@ -1,7 +1,7 @@
 const services = [
     {
       icon: "fa-solid fa-globe",
-      title: "Full Stack Web Development",
+      title: "Web Development",
       description: "I specialize in building end-to-end web applications, from front-end user interfaces, business logic to back-end server logic and database management. "
     }
     ,

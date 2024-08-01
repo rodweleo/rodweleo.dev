@@ -32,7 +32,7 @@ const Homepage = () => {
       
       <section id="#" className="mt-10 flex flex-wrap justify-center items-center gap-10 min-h-screen p-5">
         <div className="max-w-[650px] space-y-5">
-          <p className="px-5 py-2 rounded-full bg-slate-100 w-fit font-semibold text-lg">Hello &#128075;, I'm Rodwell Leo</p>
+          <p className="px-5 py-1 rounded-full bg-slate-200/80 w-fit font-medium text-lg">Hello &#128075;, I'm Rodwell Leo</p>
           <h1 className="font-bold text-6xl max-md:text-5xl leading-tight"> Crafting <span className="text-blue-500" ref={typedRef}></span> Digital Experiences.</h1>
           <p className="text-slate-500">I'm a passionate full-stack software engineer, dedicated to creating beautiful and functional digital products. <br/> As a full stack software engineer, my focus is on creating Software as a Service (SaaS) solutions that redefine industry standards. <br/> I am driven by a passion for software craftsmanship and product innovation, leveraging technology to solve problems and create value for businesses and individuals alike.</p>
           <ul className="flex items-center gap-5">
@@ -41,7 +41,7 @@ const Homepage = () => {
             <li><Link to="mailto:leorodwel86@gmail.com" title="Send a mail"><Mail /></Link></li>
           </ul>
           <ul className="flex flex-wrap gap-5">
-            <li><Button type="button" variant="secondary"><a href="#contact-me">Contact Me</a></Button></li>
+            <li><Button type="button" variant="outline"><a href="/contact-me">Contact Me</a></Button></li>
             <li><Button type="button"  onClick={() => window.open("https://drive.google.com/file/d/1Cvs5ZY6oT44_3AdLt5Dy77cWGwjCC4Qa/view?usp=drive_link", "_blank")}>View Resume</Button></li>
           </ul>
         </div>

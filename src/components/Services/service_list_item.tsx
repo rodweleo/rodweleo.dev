@@ -6,7 +6,7 @@ const ServiceListItem = ({service, index}: {
   service: ServiceProps
   index: number
 }) => {
-  return <Card className="max-w-[400px]" key={index}>
+  return <Card className="max-w-[400px] shadow-xl hover:shadow-2xl hover:scale-[1.0125] transition-all duration-300" key={index}>
   <CardHeader>
     <CardTitle className="flex flex-col gap-5">
       <i className={`${service.icon} text-blue-700 size-4`}></i>

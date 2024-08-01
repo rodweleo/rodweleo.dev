@@ -18,7 +18,7 @@ function App() {
   }, [location]);
 
   return (
-    <main className="min-h-full">
+    <main className="min-h-full bg-cover bg-[url('/images/main-bg.jpg')] filter backdrop-blur-xl">
       <Header />
       <section className="min-h-screen">
         <Routes location={location} key={location.pathname}>

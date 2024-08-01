@@ -75,7 +75,7 @@ export const RequestAQuoteForm = () => {
   return (
     <section className="space-y-2.5 max-w-[500px]">
       <header className="flex flex-col">
-        <p className="bg-slate-100/50 text-slate-800 font-semibold w-fit px-6 py-2 rounded-full">
+        <p className="bg-slate-200/50 font-semibold w-fit px-6 py-2 rounded-full">
           Have a project in mind or just want to say hello?{" "}
         </p>
         <h1 className="font-bold text-5xl">Get in Touch</h1>
