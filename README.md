@@ -2,26 +2,27 @@
 
 ## 🚀 About Me
 
-I'm a passionate Full-Stack Software Engineer with over 2 years of experience in leading cross-functional teams in designing, developing, and implementing complex software solutions using agile methodologies. I have a keen interest in AI, FinTech, and leveraging technology to solve real-world problems, especially in the agricultural sector in Kenya.
+I'm a passionate Software Engineer with over 2 years of experience in working with cross-functional teams in designing, developing, and implementing software solutions using agile methodologies. 
+I have a keen interest in AI, FinTech, and leveraging technology to solve real-world problems promoting the sustainable development goals.
 
 ## 🛠️ Skills
 
-- **Frontend:** React, Next.js, HTML, CSS, JavaScript, TailwindCSS
-- **Backend:** Node.js, Express, SQL, No-SQL
-- **Tools & Platforms:** Supabase, Langchain, Lucide, Canva
+- **Frontend:** React, Next.js, HTML, CSS, JavaScript, TailwindCSS, ShadCN UI
+- **Backend:** Node.js, Express, Java(Springboot)
+- **Databases:** Supabase, Firebase,
+- **Tools & Platforms:** Langchain, Canva, Figma, Gemini
 - **Languages:** Java, JavaScript, Typescript
 - **Others:** Agile methodologies, Team leadership, Software Quality Assurance
 
 ## 💼 Experience
 
 - **Technical Co-Founder at Manivas**  
-  Building a FinTech platform aimed at enhancing personal financial management. The start-up is still active but in the beta stage of development.
+  Building a FinTech platform aimed at enhancing personal financial management.
 
 - **Intern at Jamii Telecommunications LTD**  
-  Worked in the planning and engineering department.
+  Worked on automation and generating business insights in the engineering department.
 
 - **Projects**  
-  - **FinTech Platform for EcoBank Challenge**: Developed solutions for invoice financing, credit lending, and digital banking.
   - **Mental Health Support Web Application**: Built a platform allowing guests to join specific groups for mental health support.
   - **Agricultural AI Solutions**: Created AI-driven tools for smart farming, optimizing crop selection, resource management, and market access for smallholder farmers and cooperatives in Kenya.
 
@@ -38,10 +39,9 @@ I'm a passionate Full-Stack Software Engineer with over 2 years of experience in
 ## ✨ Interests
 
 - AI and Machine Learning
+- Blockchain technology
 - FinTech Solutions
-- Sustainable Agriculture
-- Game Development (Beginner)
-- Healthcare Technology
+- Game Development
 
 ## 📫 How to Reach Me
 
@@ -59,12 +59,11 @@ I'm a passionate Full-Stack Software Engineer with over 2 years of experience in
 
 ## 🖥️ Languages and Tools
 
-![Languages and Tools](https://skillicons.dev/icons?i=js,html,css,react,nodejs,express,java,postgresql,mysql,supabase,canva)
+![Languages and Tools](https://skillicons.dev/icons?i=js,html,css,react,nodejs,nextjs,express,java,postgresql,mysql,supabase,canva,figma,firebase,typescript,docker,git)
 
 ## 🌱 Fun Facts
 
-- I enjoy building interactive learning platforms and games to make education engaging and accessible.
-- I love exploring sustainable agriculture practices to improve farming efficiency and environmental impact.
+- I enjoy building interactive platforms tiered to fulfilling the SDGs.
 
 ---
 
