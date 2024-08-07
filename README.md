@@ -45,9 +45,9 @@ I'm a passionate Full-Stack Software Engineer with over 2 years of experience in
 
 ## 📫 How to Reach Me
 
-- **Email**: [Your Email](mailto: leorodwel86@gmail.com)
-- **LinkedIn**: [Your LinkedIn](https://www.linkedin.com/in/rodweleo)
-- **Portfolio**: [Your Portfolio](https://rodweleo.vercel.app)
+- **Email**: leorodwel86@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/rodweleo
+- **Portfolio**: https://rodweleo.vercel.app
 
 ## 📈 GitHub Stats
 
