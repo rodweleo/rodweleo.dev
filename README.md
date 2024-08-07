@@ -2,7 +2,7 @@
 
 ## 🚀 About Me
 
-I'm a passionate Software Engineer with over 2 years of experience in working with cross-functional teams in designing, developing, and implementing software solutions using agile methodologies. 
+I'm a Software Engineer with over 2 years of experience in working with cross-functional teams in designing, developing, and implementing software solutions using agile methodologies. 
 I have a keen interest in AI, FinTech, and leveraging technology to solve real-world problems promoting the sustainable development goals.
 
 ## 🛠️ Skills
