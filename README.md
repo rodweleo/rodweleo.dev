@@ -6,10 +6,10 @@ I'm a passionate Full-Stack Software Engineer with over 2 years of experience in
 
 ## 🛠️ Skills
 
-- **Frontend:** React, Next.js, HTML, CSS, JavaScript
+- **Frontend:** React, Next.js, HTML, CSS, JavaScript, TailwindCSS
 - **Backend:** Node.js, Express, SQL, No-SQL
 - **Tools & Platforms:** Supabase, Langchain, Lucide, Canva
-- **Languages:** Java, PLSQL
+- **Languages:** Java, JavaScript, Typescript
 - **Others:** Agile methodologies, Team leadership, Software Quality Assurance
 
 ## 💼 Experience
@@ -45,17 +45,17 @@ I'm a passionate Full-Stack Software Engineer with over 2 years of experience in
 
 ## 📫 How to Reach Me
 
-- **Email**: [Your Email](mailto:your-email@example.com)
-- **LinkedIn**: [Your LinkedIn](https://www.linkedin.com/in/yourprofile)
-- **Portfolio**: [Your Portfolio](https://yourportfolio.com)
+- **Email**: [Your Email](mailto: leorodwel86@gmail.com)
+- **LinkedIn**: [Your LinkedIn](https://www.linkedin.com/in/rodweleo)
+- **Portfolio**: [Your Portfolio](https://rodweleo.vercel.app)
 
 ## 📈 GitHub Stats
 
-![Rodwell's GitHub stats](https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical)
+![Rodwell's GitHub stats](https://github-readme-stats.vercel.app/api?username=rodweleo&show_icons=true&theme=radical)
 
 ## 🏆 GitHub Trophies
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=yourusername&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=rodweleo&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
 
 ## 🖥️ Languages and Tools
 
